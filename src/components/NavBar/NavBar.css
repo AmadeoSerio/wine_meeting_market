@@ -1,0 +1,57 @@
+.navbar{
+    background-color: #f94707;
+}
+
+.div-uno{
+    width: 100% !important;
+}
+
+.imgBrand{
+    height: 3rem;
+}
+
+.buscador{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: .3rem;
+}
+
+.tres-rayas{
+    width: 3rem;
+    color: #ffff;
+    border: .1rem solid #ffffffb6;
+    margin-left: .7rem;
+}
+
+.navbar-toggler-icon{
+    width: 1.5rem;
+    color: #ffff;
+}
+
+.boton-buscar{
+    color: #ffff;
+    border: .1rem solid #ffff;
+}
+
+.btn-outline-success{
+    --bs-btn-color: #481f4f;
+    --bs-btn-border-color: #481f4f;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #481f4f;
+    --bs-btn-hover-border-color: #481f4f;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #481f4f;
+    --bs-btn-active-border-color: #481f4f;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #481f4f;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #481f4f;
+    --bs-gradient: none;
+}
+
+.texto-navbar{
+    text-decoration: none;
+    color: black;
+}

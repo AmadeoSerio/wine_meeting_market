@@ -1,0 +1,17 @@
+.imagen-promo{
+    margin-top: 9rem;
+    width: 90%;
+}
+
+.carousel-inner {
+    text-align: center;
+}
+
+.carrusel-fondo{
+    background-color: #481f4f;
+    padding-bottom: 1.5rem;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-image: none;
+}
