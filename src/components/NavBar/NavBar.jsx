@@ -20,7 +20,7 @@ function NavBar() {
 
               <Navbar.Brand>
                 <Link to="/">
-                  <img src="../public/img/brand_wine_meeting_ok.png" alt="wine meeting marca" className="imgBrand" />
+                  <img src="./img/brand_wine_meeting_ok.png" alt="wine meeting marca" className="imgBrand" />
                 </Link>
               </Navbar.Brand>
 
