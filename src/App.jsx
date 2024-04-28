@@ -9,27 +9,22 @@ import Cart from './components/Cart/Cart.jsx';
 const App = () => {
   return (
     <>
-    <BrowserRouter>
-    <ContextProvider>
-    <NavBar/>
-      <Routes>
-      <Route path='/' element={ <ItemListContainer/> }/>
+      <BrowserRouter>
+        <ContextProvider>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={<ItemListContainer />} />
 
-      {/* <Route path='/bodegas' element={ }/>
-      <Route path='/tintos' element={ }/>
-      <Route path='/blancos' element={ }/>
-      <Route path='/espumantes' element={ }/>
-      <Route path='/destilados' element={ }/>
-      <Route path='/accesorios' element={ }/>
-      <Route path='/almacen' element={ }/>
-      <Route path='/nosotras' element={ }/> */}
+            <Route path='/bodegas' element={<ItemListContainer />} />
+            <Route path='/:idCategoria' element={<ItemListContainer />} />
+            <Route path='/nosotras' element={<ItemListContainer />} />
 
-      <Route path='/carrito' element={<Cart/>}/>
+            <Route path='/carrito' element={<Cart />} />
 
-      </Routes>
+          </Routes>
 
-      </ContextProvider>
-    </BrowserRouter>
+        </ContextProvider>
+      </BrowserRouter>
     </>
   )
 }

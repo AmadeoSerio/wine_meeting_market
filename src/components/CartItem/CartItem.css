@@ -1,0 +1,22 @@
+.cart-item{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.boton-eliminar{
+    background-color: rgba(0, 255, 255, 0);
+    border-radius: .3rem;
+    color: #481f4f;
+}
+
+.info-cart h4{
+font-weight: 600;
+font-size: 1.2rem;
+}
+
+.info-cart p {
+    margin: 0;
+}

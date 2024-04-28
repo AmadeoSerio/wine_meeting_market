@@ -64,6 +64,8 @@ function NavBar() {
                     <p>Bodegas</p>
                   </NavLink>
 
+                  <NavDropdown.Divider />
+
                   <NavLink to="/tintos" className="texto-navbar">
                     <p>Tintos</p>
                   </NavLink>
@@ -72,12 +74,22 @@ function NavBar() {
                     <p>Blancos</p>
                   </NavLink>
 
+                  <NavLink to="/rosados" className="texto-navbar">
+                    <p>Rosados</p>
+                  </NavLink>
+
                   <NavLink to="/espumantes" className="texto-navbar">
                     <p>Espumantes</p>
                   </NavLink>
 
+                  <NavDropdown.Divider />
+
                   <NavLink to="/destilados" className="texto-navbar">
                     <p>Destilados</p>
+                  </NavLink>
+
+                  <NavLink to="/cervezas" className="texto-navbar">
+                    <p>Cervezas</p>
                   </NavLink>
 
                     <NavDropdown.Divider />
@@ -88,6 +100,7 @@ function NavBar() {
                   <NavLink to="/almacen" className="texto-navbar">
                     <p>Almacén</p>
                   </NavLink>
+                  
                   </NavDropdown>
 
                   <NavLink to="/nosotras" className="texto-navbar">
