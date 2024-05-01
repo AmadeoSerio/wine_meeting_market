@@ -4,6 +4,7 @@ import { ContextProvider } from './context/context.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar'
 import Cart from './components/Cart/Cart.jsx';
+import Nosotras from './components/Nosotras/Nosotras.jsx';
 
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
 
             <Route path='/bodegas' element={<ItemListContainer />} />
             <Route path='/:idCategoria' element={<ItemListContainer />} />
-            <Route path='/nosotras' element={<ItemListContainer />} />
+            <Route path='/nosotras' element={<Nosotras />} />
 
             <Route path='/carrito' element={<Cart />} />
 

@@ -7,20 +7,25 @@ import './Cart.css'
 const Cart = () => {
     const {carrito, vaciarCarrito, total, cantidadTotal} = useContext(CarritoContext);
 
-    if (total === 0) {
+    if (cantidadTotal === 0) {
         return (
-            <>
-            <h2>NO HAY PRODUCTOS</h2>
-            <Link to="/">Ver productos</Link>
-            </>
+            <div className="carritoVacio container">
+                <div>
+                    <img className="carrito-vacio" src="./img/carrito-vacio.png" alt="" />
+                    <h2>Carrito vacío</h2>
+                </div>
+                <Link to="/" className="botonVerProd"> Ver Productos </Link>
+            </div>
         )
     }
 
   return (
     <>
     <div className="cart-div container">
+        <h2 className="titulo-carrito">Artículos del carrito</h2>
+        <hr />
         {
-            carrito.map(producto => <CartItem key={producto.id} {...producto}/>)
+            carrito.map(producto => <CartItem key={producto.item.id} {...producto}/>)
         }
         
         <h3>Total: ${cantidadTotal}</h3>

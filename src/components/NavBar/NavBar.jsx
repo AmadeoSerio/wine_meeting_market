@@ -38,73 +38,73 @@ function NavBar() {
                   className="me-2 mt-1"
                   aria-label="Search"
                 />
-                <Button variant="outline-success" className="mt-1 boton-buscar">Buscar</Button>
+                <Button variant="outline-success" className="mt-1 boton-buscar" value={search}>Buscar</Button>
               </Form>
             </div>
 
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="end">
+              placement="end" className='navbar-fondo'>
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>Wine Meeting</Offcanvas.Title>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className='p-navBar'>Wine Meeting</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <NavLink to="/" className="texto-navbar">
-                  <p>Inicio</p>
+                  <NavLink to="/" className="texto-navbar inicio">
+                    <p className='p-navBar'>Inicio</p>
                   </NavLink>
 
-                  <NavDropdown
+                  <NavDropdown className='p-navBar'
                     title="Filtrar por"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
 
-                  <NavLink to="/bodegas" className="texto-navbar">
-                    <p>Bodegas</p>
+                    {/* <NavLink to="/bodegas" className="texto-navbar">
+                    <p className='p-navBar'>Bodegas</p>
                   </NavLink>
 
-                  <NavDropdown.Divider />
+                  <NavDropdown.Divider /> */}
 
-                  <NavLink to="/tintos" className="texto-navbar">
-                    <p>Tintos</p>
-                  </NavLink>
+                    <NavLink to="/tintos" className="texto-navbar">
+                      <p className='p-navBar container'>Tintos</p>
+                    </NavLink>
 
-                  <NavLink to="/blancos" className="texto-navbar">
-                    <p>Blancos</p>
-                  </NavLink>
+                    <NavLink to="/blancos" className="texto-navbar">
+                      <p className='p-navBar container'>Blancos</p>
+                    </NavLink>
 
-                  <NavLink to="/rosados" className="texto-navbar">
-                    <p>Rosados</p>
-                  </NavLink>
+                    <NavLink to="/rosados" className="texto-navbar">
+                      <p className='p-navBar container'>Rosados</p>
+                    </NavLink>
 
-                  <NavLink to="/espumantes" className="texto-navbar">
-                    <p>Espumantes</p>
-                  </NavLink>
-
-                  <NavDropdown.Divider />
-
-                  <NavLink to="/destilados" className="texto-navbar">
-                    <p>Destilados</p>
-                  </NavLink>
-
-                  <NavLink to="/cervezas" className="texto-navbar">
-                    <p>Cervezas</p>
-                  </NavLink>
+                    <NavLink to="/espumantes" className="texto-navbar">
+                      <p className='p-navBar container'>Espumantes</p>
+                    </NavLink>
 
                     <NavDropdown.Divider />
-                  <NavLink to="/accesorios" className="texto-navbar">
-                    <p>Accesorios</p>
-                  </NavLink>
 
-                  <NavLink to="/almacen" className="texto-navbar">
-                    <p>Almacén</p>
-                  </NavLink>
-                  
+                    <NavLink to="/destilados" className="texto-navbar">
+                      <p className='p-navBar container'>Destilados</p>
+                    </NavLink>
+
+                    <NavLink to="/cervezas" className="texto-navbar">
+                      <p className='p-navBar container'>Cervezas</p>
+                    </NavLink>
+
+                    <NavDropdown.Divider />
+                    <NavLink to="/accesorios" className="texto-navbar">
+                      <p className='p-navBar container'>Accesorios</p>
+                    </NavLink>
+
+                    <NavLink to="/almacen" className="texto-navbar">
+                      <p className='p-navBar container'>Almacén</p>
+                    </NavLink>
+
                   </NavDropdown>
 
                   <NavLink to="/nosotras" className="texto-navbar">
-                  <p>Nosotras</p>
+                    <p className='p-navBar'>Nosotras</p>
                   </NavLink>
 
                 </Nav>

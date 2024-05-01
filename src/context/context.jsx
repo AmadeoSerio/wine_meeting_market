@@ -47,8 +47,18 @@ export const ContextProvider = ({children}) => {
         setTotal(0);
     }
 
+    const sumarUno = (id) => {
+        const productoSumado = carrito.find(prod => prod.item.id === id);
+        const carritoActualizado = carrito.filter(prod => prod.item.id !== id);
+
+        setCarrito(carritoActualizado)
+        setCantidadTotal(prev => prev + (productoSumado.item.precio));
+        setTotal(prev => prev + 1)
+
+    }
+
     return (
-        <CarritoContext.Provider value={{ carrito, total, cantidadTotal, agregarAlCarrito, eliminarProducto, vaciarCarrito }}>
+        <CarritoContext.Provider value={{ carrito, total, cantidadTotal, agregarAlCarrito, eliminarProducto, vaciarCarrito, sumarUno }}>
         {children}
         </CarritoContext.Provider>
     )

@@ -6,6 +6,7 @@ const CartItem = ({item, cantidad}) => {
     const {eliminarProducto} = useContext(CarritoContext);
 
   return (
+    <>
     <div className="cart-item">
       <div className="info-cart">
         <h4>{item.nombre}</h4>
@@ -14,6 +15,8 @@ const CartItem = ({item, cantidad}) => {
       </div>
         <button onClick={()=>eliminarProducto(item.id)} className="boton-eliminar"><i className="fa-solid fa-trash"></i></button>
     </div>
+    <hr />
+    </>
   )
 }
 

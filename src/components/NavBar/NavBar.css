@@ -55,3 +55,25 @@
     text-decoration: none;
     color: black;
 }
+
+.navbar-nav .dropdown-menu{
+background-color: #f94707;
+}
+
+.navbar-fondo {
+background-color: #f94707;
+}
+
+.p-navBar{
+    color: #ffff;
+    font-size: 1.3rem;
+}
+
+.dropdown-menu {
+    --bs-dropdown-border-color: #ffff;
+    --bs-dropdown-divider-bg: #ffff
+}
+
+.inicio{
+    margin-bottom: -.9rem;
+}
