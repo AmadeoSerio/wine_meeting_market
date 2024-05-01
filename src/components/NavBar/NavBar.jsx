@@ -38,7 +38,7 @@ function NavBar() {
                   className="me-2 mt-1"
                   aria-label="Search"
                 />
-                <Button variant="outline-success" className="mt-1 boton-buscar" value={search}>Buscar</Button>
+                <Button variant="outline-success" className="mt-1 boton-buscar">Buscar</Button>
               </Form>
             </div>
 
