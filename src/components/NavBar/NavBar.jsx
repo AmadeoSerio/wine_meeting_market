@@ -1,6 +1,4 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -30,17 +28,9 @@ function NavBar() {
               </div>
             </div>
 
-            <div className='buscador'>
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Buscar por nombre..."
-                  className="me-2 mt-1"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success" className="mt-1 boton-buscar">Buscar</Button>
-              </Form>
-            </div>
+            {/* <div className='buscador'>
+             <Buscador/>
+            </div> */}
 
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}

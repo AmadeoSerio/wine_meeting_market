@@ -5,6 +5,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import NavBar from './components/NavBar/NavBar'
 import Cart from './components/Cart/Cart.jsx';
 import Nosotras from './components/Nosotras/Nosotras.jsx';
+import Checkout from './components/Checkout/Checkout.jsx';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
             <Route path='/nosotras' element={<Nosotras />} />
 
             <Route path='/carrito' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
 
           </Routes>
 

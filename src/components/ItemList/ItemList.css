@@ -6,3 +6,9 @@
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
+
+.texto-error{
+    margin-top: 0%;
+    font-size: 2rem;
+    color: red;
+}

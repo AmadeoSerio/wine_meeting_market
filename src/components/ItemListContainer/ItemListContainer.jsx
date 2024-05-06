@@ -4,6 +4,7 @@ import CarruselWelcome from "../CarruselWelcome/CarruselWelcome";
 import { useParams } from "react-router-dom";
 import { db } from "../../services/config";
 import { getDocs, collection, query, where } from "firebase/firestore";
+import BarraBuscador from "../BarraBuscador/BarraBuscador";
 
 
 
@@ -31,6 +32,7 @@ const ItemListContainer = () => {
     return (
         <>
             <CarruselWelcome />
+            <BarraBuscador data={productos} placeholder="Busca salame"/>
             <ItemList productos={productos} />
         </>
     )
