@@ -28,10 +28,6 @@ function NavBar() {
               </div>
             </div>
 
-            {/* <div className='buscador'>
-             <Buscador/>
-            </div> */}
-
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}

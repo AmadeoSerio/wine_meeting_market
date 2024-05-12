@@ -1,0 +1,23 @@
+.footer-div{
+    background-color: #f94707;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.footer-div p, h5 {
+    color: #fafafa;
+    text-align: center;
+}
+
+.footer-iframe{
+    text-align: center;
+}
+
+.footer-iframe iframe{
+    width: 300px;
+    height: 100px;
+}
+
+.footer-final{
+    margin-bottom: 0rem;
+}

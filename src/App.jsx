@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/NavBar'
 import Cart from './components/Cart/Cart.jsx';
 import Nosotras from './components/Nosotras/Nosotras.jsx';
 import Checkout from './components/Checkout/Checkout.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
 
           </Routes>
 
+          <Footer/>
         </ContextProvider>
       </BrowserRouter>
     </>

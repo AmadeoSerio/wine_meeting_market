@@ -1,8 +1,8 @@
 .img-vino{
-    width: 70%;
+    width: 90%;
     align-self: center;
-    border-radius: 10%;
-    padding-top: 1rem;
+    border-radius: 5%;
+    padding-top: .5rem;
 }
 
 .card-estilo{
@@ -43,15 +43,16 @@
 }
 
 .boton-ir-carrito{
-    color: #fff;
+    color: #ffff;
     background-color: #f94707;
     border: 1px solid #f94707;
     cursor: pointer;
-    padding: 0.375rem 0.75rem ;
+    padding: 0.355rem 0.55rem ;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
+    border-radius:7px;
 }
 
 .card-body{

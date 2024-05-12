@@ -1,8 +1,17 @@
 .nosotras-div{
-    margin-top: 8rem;
+    margin-top: 5.5rem;
 }
 
 .insta-etiqueta{
     text-decoration: none;
     color: #f94707;
+}
+
+.div-foto{
+    text-align: center;
+}
+
+.img-nosotras{
+width: 90%;
+margin-bottom: 1rem;
 }

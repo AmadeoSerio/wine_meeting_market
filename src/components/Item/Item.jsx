@@ -12,12 +12,12 @@ const {agregarAlCarrito} = useContext(CarritoContext);
 
 const manejadorCantidad = (cantidad) => {
   setAgregarCantidad(cantidad);
-  const item = {id, nombre, precio};
+  const item = {id, nombre, precio, varietal};
   agregarAlCarrito(item, cantidad);
 }
 
     return (
-      <Card style={{ width: '45%'}} className='d-flex card'>
+      <Card style={{ width: '48%'}} className='d-flex card'>
         <Card.Img variant="top" src={img} className='img-vino'/>
         <Card.Body className='card-body'>
           <Card.Title className='text1'>{nombre}</Card.Title>

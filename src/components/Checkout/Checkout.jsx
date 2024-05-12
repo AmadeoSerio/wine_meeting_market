@@ -1,7 +1,8 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { CarritoContext } from "../../context/context";
 import { db } from "../../services/config";
 import { collection, addDoc } from "firebase/firestore";
+import './Checkout.css'
 
 const Checkout = () => {
     const [nombre, setNombre] = useState("");
@@ -11,7 +12,7 @@ const Checkout = () => {
     const [error, setError] = useState("");
     const [orderId, setOrderId] = useState("");
 
-    const {carrito, vaciarCarrito, total, totalCantidad} = useContext (CarritoContext);
+    const {carrito, vaciarCarrito, total, cantidadTotal} = useContext (CarritoContext);
 
     const manejadorFormulario = (event) => {
         event.preventDefault();
@@ -21,7 +22,7 @@ const Checkout = () => {
         }
 
         if (email !== emailConfirmacion) {
-            setError("Los campor del email no coinciden")
+            setError("Los campos del email no coinciden")
             return;
         }
 
@@ -48,41 +49,36 @@ const Checkout = () => {
             setError("Se produjo un error al crear la orden")
         })
 
+        const url = 
+            "https://api.whatsapp.com/send?phone=5492612051027&text=Hola,%20soy%20*" + nombre + "*%20y%20estoy%20buscando%20los%20siguientes%20productos:%20%0A%0A*Quiero*:" + carrito.map(producto => ( "%0A" + producto.item.nombre + "%20" + producto.item.varietal + "%20x%20" + producto.cantidad)) + "%0A" + "%0A*Total*:%20" + "$" + cantidadTotal;
+            
+            window.open(url);
     }
 
   return (
-    <div>
-        <h2>Checkout</h2>
+    <div className="checkout-div container">
+        <h2>Completa los campos</h2>
 
         <form onSubmit={manejadorFormulario}>
-        {
-            carrito.map(producto => (
-                <div key={producto.item.id}>
-                    <p> {producto.item.nombre} x {producto.cantidad} </p>
-                    <p> {producto.item.precio} </p>
-                    <hr />
-                </div>
-            ))
-        }
         
         <div>
             <label>Nombre</label>
-            <input type="text" onChange={(e) => setNombre(e.target.value)}/>
+            <input className="checkout-input" type="text" onChange={(e) => setNombre(e.target.value)}/>
         </div>
         
         <div>
             <label>Teléfono</label>
-            <input type="text" onChange={(e) => setTelefono(e.target.value)}/>
+            <input className="checkout-input" type="text" onChange={(e) => setTelefono(e.target.value)}/>
         </div>
 
         <div>
             <label>Email</label>
-            <input type="email" onChange={(e) => setEmail(e.target.value)}/>
+            <input className="checkout-input" type="email" onChange={(e) => setEmail(e.target.value)}/>
         </div>
 
         <div>
             <label>Confirmar email</label>
-            <input type="email" onChange={(e) => setEmailConfimacion(e.target.value)}/>
+            <input className="checkout-input ultimo-input" type="email" onChange={(e) => setEmailConfimacion(e.target.value)}/>
         </div>
 
         {
@@ -90,16 +86,30 @@ const Checkout = () => {
         }
         
 
-        <button type="submit"> Confirmar Pedido </button>
+        <button className="checkout-boton" type="submit"> Confirmar Pedido </button>
 
         {
             orderId && (
+                <div>
                 <strong> ¡Gracias por tu pedido! Tu número de orden es: {orderId} </strong>
+                </div>
             )
         }
 
         </form>
 
+        <h3 className="titulo-lista">Lista de productos:</h3>
+        {
+            carrito.map(producto => (
+            
+                <div className="div-lista" key={producto.item.id}>
+                    <p className="checkout-nombre"> {producto.item.nombre} x {producto.cantidad} </p>
+                    <p className="checkout-precio"> ${producto.item.precio} </p>
+                    <hr />
+                </div>
+            ))
+        }
+        <p>Total: ${cantidadTotal}</p>
     </div>
   )
 }

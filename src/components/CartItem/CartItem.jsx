@@ -10,6 +10,7 @@ const CartItem = ({item, cantidad}) => {
     <div className="cart-item">
       <div className="info-cart">
         <h4>{item.nombre}</h4>
+        <p>Varietal: {item.varietal}</p>
         <p>Cantidad: {cantidad}</p>
         <p>Precio: ${item.precio}</p>
       </div>

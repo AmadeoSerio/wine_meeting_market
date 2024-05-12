@@ -1,0 +1,39 @@
+.checkout-div {
+    margin-top: 5.5rem;
+    margin-bottom: 1rem;
+}
+
+.checkout-nombre{
+    margin-bottom: 0rem;
+}
+
+.div-lista {
+    margin-bottom: 1rem;
+}
+
+.titulo-lista{
+    margin-top: 2rem;
+}
+
+.checkout-input:focus{
+    outline: none;
+}
+
+.checkout-input{
+    margin-bottom: .5rem;
+    border-radius: 7px;
+    width: 100%;
+    padding: .2rem;
+}
+
+.checkout-boton{
+    background-color: #f94707;
+    color: #fafafa;
+    padding: .5rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.ultimo-input{
+    margin-bottom: 1rem;
+}

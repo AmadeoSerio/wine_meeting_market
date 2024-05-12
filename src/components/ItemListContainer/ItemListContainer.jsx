@@ -32,7 +32,7 @@ const ItemListContainer = () => {
     return (
         <>
             <CarruselWelcome />
-            <BarraBuscador data={productos} placeholder="Busca salame"/>
+            <BarraBuscador data={productos} placeholder="Buscar por nombre"/>
             <ItemList productos={productos} />
         </>
     )
