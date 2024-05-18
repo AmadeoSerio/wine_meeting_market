@@ -10,22 +10,15 @@
     height: 3rem;
 }
 
-.buscador{
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    padding-bottom: .3rem;
-}
-
 .tres-rayas{
-    width: 3rem;
+    width: 2.7rem;
     color: #ffff;
     border: .1rem solid #ffffffb6;
     margin-left: .7rem;
 }
 
 .navbar-toggler-icon{
-    width: 1.5rem;
+    width: 1.2rem;
     color: #ffff;
 }
 

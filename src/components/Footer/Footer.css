@@ -1,6 +1,14 @@
+.aclaracion-web{
+    font-size: .7rem;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: #ececec;
+    padding: .5rem 0;
+}
+
 .footer-div{
     background-color: #f94707;
-    margin-top: 1rem;
+    margin-top: -1rem;
     padding-top: 1rem;
 }
 
@@ -20,4 +28,14 @@
 
 .footer-final{
     margin-bottom: 0rem;
+}
+
+.fa-instagram{
+    color: #ffff;
+    font-size: 1.6rem;
+}
+
+.fa-whatsapp{
+    color: #ffff;
+    font-size: 1.6rem;    
 }

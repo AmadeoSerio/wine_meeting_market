@@ -1,6 +1,16 @@
 import './Nosotras.css'
 
+const scrollToTop = () =>{ 
+  window.scrollTo({ 
+    top: 0,  
+    behavior: 'smooth'
+    /* you can also use 'auto' behaviour 
+       in place of 'smooth' */
+  }); 
+};
+
 const Nosotras = () => {
+  scrollToTop();
   return (
     <>
     <div className='nosotras-div container'>

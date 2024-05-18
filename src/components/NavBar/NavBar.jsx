@@ -5,10 +5,22 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
 
 import './NavBar.css'
 
 function NavBar() {
+  const [show, setShow] = useState(false);
+  
+  const handleClose = () => {
+    setShow(false)
+    
+    window.scrollTo({ 
+      top: 0,  
+      behavior: 'auto'
+    }); 
+  };
+  const handleShow = () => setShow(true);
   return (
     <>
       {['sm'].map((expand) => (
@@ -24,20 +36,23 @@ function NavBar() {
 
               <div>
                 <CartWidget />
-                <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='tres-rayas' data-bs-theme="dark" />
+                <Navbar.Toggle onClick={handleShow} aria-controls={`offcanvasNavbar-expand-${expand}`} className='tres-rayas' data-bs-theme="dark" />
               </div>
             </div>
 
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="end" className='navbar-fondo'>
+              placement="end" className='navbar-fondo'
+              show={show}
+              onHide={handleClose}>
+                
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className='p-navBar'>Wine Meeting</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <NavLink to="/" className="texto-navbar inicio">
+                  <NavLink to="/" className="texto-navbar inicio" onClick={handleClose}>
                     <p className='p-navBar'>Inicio</p>
                   </NavLink>
 
@@ -52,44 +67,44 @@ function NavBar() {
 
                   <NavDropdown.Divider /> */}
 
-                    <NavLink to="/tintos" className="texto-navbar">
+                    <NavLink to="/tintos" className="texto-navbar" onClick={handleClose}>
                       <p className='p-navBar container'>Tintos</p>
                     </NavLink>
 
-                    <NavLink to="/blancos" className="texto-navbar">
+                    <NavLink to="/blancos" className="texto-navbar" onClick={handleClose}>
                       <p className='p-navBar container'>Blancos</p>
                     </NavLink>
 
-                    <NavLink to="/rosados" className="texto-navbar">
+                    <NavLink to="/rosados" className="texto-navbar" onClick={handleClose}>
                       <p className='p-navBar container'>Rosados</p>
                     </NavLink>
 
-                    <NavLink to="/espumantes" className="texto-navbar">
+                    <NavLink to="/espumantes" className="texto-navbar" onClick={handleClose}>
                       <p className='p-navBar container'>Espumantes</p>
                     </NavLink>
 
                     <NavDropdown.Divider />
 
-                    <NavLink to="/destilados" className="texto-navbar">
+                    <NavLink to="/destilados" className="texto-navbar" onClick={handleClose}>
                       <p className='p-navBar container'>Destilados</p>
                     </NavLink>
 
-                    <NavLink to="/cervezas" className="texto-navbar">
+                    <NavLink to="/cervezas" className="texto-navbar" onClick={handleClose}>
                       <p className='p-navBar container'>Cervezas</p>
                     </NavLink>
 
                     <NavDropdown.Divider />
-                    <NavLink to="/accesorios" className="texto-navbar">
+                    <NavLink to="/accesorios" className="texto-navbar" onClick={handleClose}>
                       <p className='p-navBar container'>Accesorios</p>
                     </NavLink>
 
-                    <NavLink to="/almacen" className="texto-navbar">
+                    <NavLink to="/almacen" className="texto-navbar" onClick={handleClose}>
                       <p className='p-navBar container'>Almacén</p>
                     </NavLink>
 
                   </NavDropdown>
 
-                  <NavLink to="/nosotras" className="texto-navbar">
+                  <NavLink to="/nosotras" className="texto-navbar" onClick={handleClose}>
                     <p className='p-navBar'>Nosotras</p>
                   </NavLink>
 

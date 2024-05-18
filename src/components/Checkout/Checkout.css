@@ -37,3 +37,24 @@
 .ultimo-input{
     margin-bottom: 1rem;
 }
+
+.swal2-popup.swal2-modal.swal2-show {
+    width: 50rem;
+    border-radius: 2rem;
+}
+
+.swal2-popup.swal2-modal.swal2-show button{
+    width: 10rem;
+    border-radius: 1rem;
+}
+
+div:where(.swal2-container) .swal2-html-container{
+    font-size: 2rem !important;
+    color: black !important;
+    font-weight: bolder !important;
+}
+
+.swal2-html-container p{
+    font-size: 1.2rem !important;
+    color: #f94707 !important;
+}

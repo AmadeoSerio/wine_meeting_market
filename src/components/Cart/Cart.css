@@ -85,3 +85,7 @@
     width: 10.1rem;
     text-decoration: none;
 }
+
+.swal2-cancel{
+    background-color: grey !important;
+}

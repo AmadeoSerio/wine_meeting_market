@@ -20,3 +20,15 @@ font-size: 1.2rem;
 .info-cart p {
     margin: 0;
 }
+
+.swal2-modal .swal2-title{
+      font-size: 1.2rem;
+}
+
+.swal2-modal .swal2-confirm {
+    width: 7rem !important;
+}
+
+.swal2-modal .swal2-cancel {
+    width: 7rem !important;
+}

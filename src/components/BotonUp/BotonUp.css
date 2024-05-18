@@ -1,0 +1,15 @@
+.botonUp {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border: none;
+    outline: none;
+    color: #ffff;
+    cursor: pointer;
+    height: 3.3rem;
+    width: 3.3rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    transition: .6s;
+    background-color: #481f4f;
+}
