@@ -12,6 +12,7 @@ import BotonUp from "../BotonUp/BotonUp";
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
+    const [todos, setTodos] = useState([])
     const [error, setError] = useState("");
 
     const { idCategoria } = useParams();
@@ -45,10 +46,24 @@ const ItemListContainer = () => {
 
     }, [idCategoria])
 
+    useEffect(() => {
+        const todosProductos = collection(db, "inventario");
+
+        getDocs(todosProductos)
+        .then(res => {
+            const traigoTodos = res.docs.map (doc =>{
+                const data = doc.data()
+                return {id:doc.id, ...data}
+            })
+            setTodos(traigoTodos)
+        })
+        .catch(error => setError(alertaError(error)))
+    }, [])
+
     return (
         <>
             <CarruselWelcome />
-            <BarraBuscador data={productos} placeholder="Buscar por nombre"/>
+            <BarraBuscador data={todos} placeholder="Buscar por nombre"/>
             <ItemList productos={productos} />
             <BotonUp/>
         </>

@@ -39,7 +39,7 @@ const BarraBuscador = ({ placeholder, data }) => {
 
             {
                 filteredData.length > 0  &&  (
-                    <p className="titulo-resultados">Resultados:</p>
+                    <p className="titulo-resultados">Resultados de la búsqueda:</p>
                 )
             }
 
