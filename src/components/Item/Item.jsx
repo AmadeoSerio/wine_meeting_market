@@ -26,7 +26,7 @@ const manejadorCantidad = (cantidad) => {
 }
 
     return (
-      <Card style={{ width: '48%'}} className='d-flex card'>
+      <Card className='d-flex card'>
         <Card.Img variant="top" src={img} className='img-vino'/>
         <Card.Body className='card-body'>
           <Card.Title className='text1'>{nombre}</Card.Title>

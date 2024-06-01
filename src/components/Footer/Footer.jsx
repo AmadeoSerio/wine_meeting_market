@@ -2,7 +2,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <>
+    <section className='footer'>
         <p className="aclaracion-web">*No se realizan transacciones a través del sitio, sólo pedidos al whatsapp*</p>
     <div className='footer-div container'>
         <h5>Gracias por visitar nuestro sitio</h5>
@@ -18,7 +18,7 @@ const Footer = () => {
 
         <p className='footer-final'>© 2024 Wine Meeting - Mendoza - Argentina</p>
     </div>
-    </>
+    </section>
   )
 }
 

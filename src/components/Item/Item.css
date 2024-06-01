@@ -13,6 +13,7 @@
 
 .card {
     border-radius: 0;
+    width: 48%;
 }
 
 .text1 {
@@ -63,4 +64,10 @@
 
 .varietal{
     color: #f94707;
+}
+
+@media screen and (min-width: 1024px) {
+ .card {
+    width: 300px;
+ }   
 }

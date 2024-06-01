@@ -11,7 +11,7 @@ const Counter = ({inicial, funcionAgregar}) => {
             title: 'Agregado al carrito',
             showCancelButton: false,
             confirmButtonText: 'OK',
-            background: "#481f4f",
+            background: "#f94707",
             color: "#eeee",
             confirmButtonColor: "#ffff",
             toast: true,

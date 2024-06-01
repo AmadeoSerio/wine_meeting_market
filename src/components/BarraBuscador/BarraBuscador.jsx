@@ -7,6 +7,9 @@ const BarraBuscador = ({ placeholder, data }) => {
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
 
+    const preventor = (e) => {
+        e.preventDefault();
+    }
 
     const handleFilter = (e) => {
         const searchWord = e.target.value;
@@ -29,12 +32,15 @@ const BarraBuscador = ({ placeholder, data }) => {
     return (
         <div className="div-buscador">
             <div className="inputs">
+                <form>
                 <input type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter} />
 
                 {
-                    wordEntered.length === 0 ? <i className="fa-solid fa-magnifying-glass"></i> : <i className="fa-solid fa-xmark" onClick={clearInput}></i>
+                    wordEntered.length == 0 ? <i className="fa-solid fa-xmark sin-color" onClick={clearInput}></i> : <i className="fa-solid fa-xmark" onClick={clearInput}></i> 
                 }
 
+                <i className="fa-solid fa-magnifying-glass" onSubmit={preventor}></i> 
+                </form>
             </div>
 
             {

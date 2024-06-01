@@ -1,6 +1,6 @@
 .div-buscador {
     text-align: center;
-    background-color: #ececec;
+    background-color: #481f4f;
     padding-top: 2rem;
     padding-bottom: 0rem;
 }
@@ -13,19 +13,19 @@
     font-size: 18px;
     padding: 15px;
     height: 30px;
-    width: 300px;
+    width: 250px;
     border-right: none;
-    border: 2px solid #f94707;
+    border-top: 2px solid #f94707;
+    border-bottom: 2px solid #f94707;
+    border-left: 2px solid #f94707;
 }
 
 .inputs input:focus {
     outline: none;
 }
 
-.fa-magnifying-glass,
-.fa-xmark {
+.fa-magnifying-glass {
     width: 50px;
-    display: grid;
     right: 3rem;
     padding-top: .5rem;
     border: 2px solid rgba(0, 0, 0, 0);
@@ -35,10 +35,23 @@
     border-left: none;
     color: #ffff;
     background-color: #f94707;
+    cursor: pointer;
 }
 
 .fa-xmark {
     cursor: pointer;
+    background-color: white;
+    padding-top: .5rem;
+    height: 34px;
+    border-bottom: #f94707 2px solid;
+    border-top: #f94707 2px solid;
+    padding-right: .5rem;
+    padding-left: .4rem;
+}
+
+.sin-color{
+    color: #ffff;
+    cursor: default;
 }
 
 .resultados {
@@ -50,11 +63,41 @@
 }
 
 .resultados div {
-    background-color: #dadada;
+    background-color: #481f4f;
+    text-align: left;
+}
+
+.resultados .card-body .card-title{
+    color: #ffff;
+}
+
+.resultados .card-body{
+    color: #ffff;
+}
+
+.resultados .card-body i{
+    color: #ffff;
+}
+
+.resultados .card-body i{
+    color: #ffff;
+}
+
+.resultados .card-body .boton-cantidad{
+    border: 2px solid #ffff;
+}
+
+.resultados .card-body .varietal{
+    color: #f94707;
+}
+
+.resultados .card  {
+    border: 1px solid #ffffff89;
 }
 
 .fin-resultados{
     padding-top: 2rem;
+    color: #ffff;
 }
 
 .no-hay-prod {
@@ -67,4 +110,9 @@
     padding-top: 1rem;
     padding-left: 1rem;
     text-align: left;
+    color: #ffff;
+}
+
+.no-hay-prod p {
+    color: #ffff;
 }
