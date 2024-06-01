@@ -16,14 +16,14 @@ const CartWidget = () => {
   const { total } = useContext(CarritoContext);
 
   return (
-    <>
+    <div className='carrito-logo'>
     <Link to="/carrito" onClick={scrollToTop}>
       <i className="fa-solid fa-cart-shopping cart"></i>
       {
         total > 0 && <p className='cartCounter'> {total} </p>
       }
     </Link>
-    </>
+    </div>
   )
 }
 

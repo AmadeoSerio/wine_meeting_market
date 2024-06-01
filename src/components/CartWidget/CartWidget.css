@@ -23,3 +23,9 @@
     padding: .0rem .30rem;
     font-weight: bolder;
 }
+
+@media screen and (min-width: 1024px) {
+    .carrito-logo{
+        margin-right: 1rem;
+    }
+   }

@@ -70,3 +70,40 @@ background-color: #f94707;
 .inicio{
     margin-bottom: -.9rem;
 }
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+       padding: 0 10rem;
+    }
+   }
+
+   @media screen and (min-width: 575px) {
+    .dropdown-toggle {
+        color: #ffff;
+        display: inline;
+        padding: 1rem !important;
+    }
+    .dropdown-toggle:hover{
+        color: #481f4f;
+        transition: .5s;
+    }
+
+    .dropdown-toggle:focus{
+        color: #481f4f !important;
+        transition: .5s;
+    }
+
+    .dropdown-toggle:active{
+        color: #481f4f !important;
+        transition: .5s;
+    }
+
+    .p-navBar:hover{
+        color: #481f4f;
+        transition: .5s;
+    }
+
+    .cartCounter{
+        margin-right: 5rem;
+    }
+   }

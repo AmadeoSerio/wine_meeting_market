@@ -70,4 +70,10 @@
  .card {
     width: 300px;
  }   
+ .text1{
+    font-size: 1.8rem;
+ }
+ .text2, .text3, .text4, .text5{
+    font-size: 1rem;
+ }
 }

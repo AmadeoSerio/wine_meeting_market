@@ -49,3 +49,25 @@
    width: 2.5rem;
    color: black;
 }
+
+.boton-agregar:hover{
+    background-color: #dc3b00;
+    border: 1px solid transparent;
+}
+
+.boton-agregar:active{
+    background-color: #dc3b00 !important;
+    border: 1px solid transparent !important;
+}
+
+.boton-agregar:focus-visible{
+    background-color: #dc3b00 !important;
+    border: 1px solid transparent !important;
+    box-shadow: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .boton-agregar {
+        font-size: 1.2rem;
+    }   
+   }

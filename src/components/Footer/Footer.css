@@ -1,13 +1,19 @@
 .footer {
     background-color: #f94707;
+    border-top: #f94707 4px solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .aclaracion-web{
     font-size: .7rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 0rem;
     background-color: #ececec;
     padding: .5rem 0;
+    border-top: #f94707 1px solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .footer-div{
