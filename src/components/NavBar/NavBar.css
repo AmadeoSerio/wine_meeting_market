@@ -6,6 +6,10 @@
     width: 100% !important;
 }
 
+.div-uno div{
+    display: flex;
+}
+
 .imgBrand{
     height: 3rem;
 }
@@ -22,10 +26,6 @@
     color: #ffff;
 }
 
-.boton-buscar{
-    color: #ffff;
-    border: .1rem solid #ffff;
-}
 
 .btn-outline-success{
     --bs-btn-color: #481f4f;

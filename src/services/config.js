@@ -3,7 +3,7 @@ import {getFirestore} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyASdGsWaJKnKeDquNBb6JTa0CLHDwpKUCk",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "wine-meeting.firebaseapp.com",
   projectId: "wine-meeting",
   storageBucket: "wine-meeting.appspot.com",
