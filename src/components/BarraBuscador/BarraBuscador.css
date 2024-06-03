@@ -30,7 +30,7 @@
 .fa-magnifying-glass {
     width: 50px;
     right: 3rem;
-    padding-top: .5rem;
+    /* padding-top: .5rem; */
     border: 2px solid #f94707;
     height: 34px;
     border-top-right-radius: 10px;
@@ -44,7 +44,7 @@
 .fa-xmark {
     cursor: pointer;
     background-color: white;
-    padding-top: .5rem;
+    /* padding-top: .5rem; */
     height: 34px;
     border-bottom: #f94707 2px solid;
     border-top: #f94707 2px solid;
