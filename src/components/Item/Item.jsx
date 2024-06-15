@@ -14,7 +14,7 @@ const scrollToTop = () =>{
   }); 
 }; 
 
-const Item = ({id, nombre, bodega, precio, varietal, descripcion, img}) => {
+const Item = ({id, nombre, bodega, precio, varietal, descripcion, img, stock}) => {
 const [agregarCantidad, setAgregarCantidad] = useState(0);
 const {agregarAlCarrito} = useContext(CarritoContext);
 
@@ -26,6 +26,7 @@ const manejadorCantidad = (cantidad) => {
 }
 
     return (
+
       <Card className='d-flex card'>
         <Card.Img variant="top" src={img} className='img-vino'/>
         <Card.Body className='card-body'>
@@ -36,9 +37,11 @@ const manejadorCantidad = (cantidad) => {
           <Card.Text className='text5'>
             {descripcion}
           </Card.Text>
-          {agregarCantidad > 0 ? (<Link to="/carrito" className='boton-ir-carrito' onClick={scrollToTop}>Ir al carrito</Link>): <Counter inicial={1} funcionAgregar={manejadorCantidad}/>}
+          
+          {agregarCantidad > 0 ? (<Link to="/carrito" className='boton-ir-carrito' onClick={scrollToTop}>Ir al carrito</Link>): stock == true ? <Counter inicial={1} funcionAgregar={manejadorCantidad}/> : <p>SIN STOCK</p>}
         </Card.Body>
       </Card>
+      
     )
   }
 
