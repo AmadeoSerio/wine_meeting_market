@@ -1,6 +1,7 @@
 .imagen-promo{
     margin-top: 6rem;
-    width: 90%;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .carousel-inner {
@@ -9,16 +10,29 @@
 
 .carrusel-fondo{
     background-color: #481f4f;
-    padding-bottom: 1.5rem;
+    padding-bottom: .5rem;
 }
+
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
     background-image: none;
 }
 
+.promo-carrusel{
+    background-color: #481f4f;
+    margin-bottom: 0;
+    color: #ffff;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: .8rem;
+}
+
 @media screen and (min-width: 1024px) {
     .imagen-promo {
        width: 1200px;
-       height: 600px;
     }   
+
+    .promo-carrusel{
+        font-size: 1.5rem;
+    }
    }
