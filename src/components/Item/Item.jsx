@@ -31,7 +31,7 @@ const manejadorCantidad = (cantidad) => {
         <Card.Img variant="top" src={img} className='img-vino'/>
         <Card.Body className='card-body'>
           <Card.Title className='text1'>{nombre}</Card.Title>
-
+          {/* <Card.Title className='text2'>${precio}</Card.Title> */}
           <Card.Title className='text3 varietal'>{varietal}</Card.Title>
           <Card.Title className='text4'>{bodega}</Card.Title>
           <Card.Text className='text5'>

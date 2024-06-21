@@ -118,7 +118,7 @@ const Checkout = () => {
             })
 
         const url =
-            "https://api.whatsapp.com/send?phone=5492612051027&text=Hola,%20soy%20*" + nombre + "*%20y%20estoy%20buscando%20los%20siguientes%20productos:%20%0A%0A*Quiero*:" + carrito.map(producto => ("%0A" + producto.item.nombre + "%20" + producto.item.varietal + "%20x%20" + producto.cantidad)) + "%0A" + "%0A*Total*:%20" + "$" + cantidadTotal;
+            "https://api.whatsapp.com/send?phone=5492612051027&text=Hola,%20soy%20*" + nombre + "*%20y%20estoy%20buscando%20los%20siguientes%20productos:%20%0A%0A*Quiero*:" + carrito.map(producto => ("%0A" + producto.item.nombre + "%20" + producto.item.varietal + "%20x%20" + producto.cantidad));
              window.open(url);
         }
 
@@ -167,12 +167,13 @@ const Checkout = () => {
 
                     <div className="div-lista" key={producto.item.id}>
                         <p className="checkout-nombre"> {producto.item.nombre} x {producto.cantidad} </p>
-                        <p className="checkout-precio"> ${producto.item.precio} </p>
+                        {/* <p className="checkout-precio"> ${producto.item.precio} </p> */}
                         <hr />
                     </div>
                 ))
             }
-            <p>Total: ${cantidadTotal}</p>
+            {/* <p>Total: ${cantidadTotal}</p> */}
+            <p>Cantidad total de productos: {total}</p>
         </div>
     )
 }

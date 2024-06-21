@@ -30,7 +30,7 @@ const CartItem = ({item, cantidad}) => {
         <h4>{item.nombre}</h4>
         <p>Varietal: {item.varietal}</p>
         <p>Cantidad: {cantidad}</p>
-        <p>Precio: ${item.precio}</p>
+        {/* <p>Precio: ${item.precio}</p> */}
       </div>
         <button onClick={()=>alertaEliminarProducto()} className="boton-eliminar"><i className="fa-solid fa-trash"></i></button>
     </div>

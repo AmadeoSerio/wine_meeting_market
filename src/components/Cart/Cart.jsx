@@ -46,7 +46,7 @@ const Cart = () => {
             carrito.map(producto => <CartItem key={producto.item.id} {...producto}/>)
         }
         
-        <h3>Total: ${cantidadTotal}</h3>
+        {/* <h3>Total: ${cantidadTotal}</h3> */}
         <h3>Cantidad de productos: {total}</h3>
         
         <div className="botones-cart">
