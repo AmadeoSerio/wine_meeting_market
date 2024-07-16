@@ -29,13 +29,15 @@ function NavBar() {
             <div className='div-uno d-flex justify-content-between align-items-center'>
 
               <Navbar.Brand>
-                <Link to="/">
+                <Link to="/" onClick={handleClose}>
                   <img src="./img/brand_wine_meeting_ok.png" alt="wine meeting marca" className="imgBrand" />
                 </Link>
               </Navbar.Brand>
 
               <div>
+
                 <CartWidget />
+
                 <Navbar.Toggle onClick={handleShow} aria-controls={`offcanvasNavbar-expand-${expand}`} className='tres-rayas' data-bs-theme="dark" />
               </div>
             </div>

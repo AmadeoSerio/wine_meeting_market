@@ -1,11 +1,7 @@
 .div-buscador {
     text-align: center;
     background-color: #481f4f;
-    padding-top: 1rem;
-    padding-bottom: 0rem;
-    border-bottom: 4px solid #f94707;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    padding-top: 0rem;
 }
 
 .inputs form{

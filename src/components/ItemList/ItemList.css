@@ -1,4 +1,4 @@
-.vidriera{
+.vidriera {
     display: flex;
     flex-wrap: wrap;
     gap: .3rem;
@@ -7,18 +7,160 @@
     margin-bottom: .5rem;
 }
 
-.titulo-todos-prod{
+.filtros-slider button {
+    display: none;
+}
+
+.contenedor-todos-prod {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f94707;
+}
+
+.carousel-control-prev {
+    margin-top: -2rem;
+    height: 2rem;
+}
+
+.carousel-control-next {
+    margin-top: -2rem;
+    height: 2rem;
+}
+
+.contenedor-filtros {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #f94707;
+}
+
+.contenedor-filtros a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 5.5rem;
+    height: 2rem;
+}
+
+.p-filtro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .7rem;
+    margin: 0;
+}
+
+.filtro1{
+    padding-right: 1rem;
+}
+
+.filtro2{
+    padding-left: .2rem;
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+    color: #481f4f;
+    font-size: 1.3rem;
+}
+
+.cargarMas-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+}
+
+.boton-cargar {
+    color: #ffff;
+    background-color: #481f4f;
+    border: 1px solid #481f4f;
+    width: 7rem;
+    border-radius: .3rem;
+    height: 2.3rem;
+}
+
+.titulo-todos-prod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    background-color: #f94707;
+    text-decoration: none;
+    height: 2rem;
     padding-top: .5rem;
+}
+
+.titulo-todos-prod p {
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: .5rem;
+}
+
+
+@media screen and (min-width: 491px) {
+    .carousel-control-prev {
+        width: 10rem;
+    }
+
+    .carousel-control-next {
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .carousel-control-prev {
+        width: 15rem;
+        margin-left: 8rem;
+    }
+
+    .carousel-control-next {
+        width: 15rem;
+        margin-right: 8rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .carousel-control-prev {
+        width: 15rem;
+    }
+
+    .carousel-control-next {
+        width: 15rem;
+    }
+}
+
+@media screen and (min-width: 1480px) {
+    .carousel-control-prev {
+        width: 25rem;
+        margin-left: 15rem;
+    }
+
+    .carousel-control-next {
+        width: 25rem;
+        margin-right: 15rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .vidriera {
-       gap: 1rem;
-       margin: .5rem 5rem;
-       margin-bottom: 1.5rem;
-    }   
-    .titulo-todos-prod{
-        font-size: 1.8rem;
-        margin-top: 1rem;
+        gap: 1rem;
+        margin: .5rem 5rem;
+        margin-bottom: 1.5rem;
     }
-   }
+
+
+    .p-filtro {
+        font-size: 1rem;
+    }
+
+    .contenedor-filtros a {
+        width: 8rem;
+    }
+}

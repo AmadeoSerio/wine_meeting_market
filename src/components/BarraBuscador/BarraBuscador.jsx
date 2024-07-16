@@ -24,10 +24,14 @@ const BarraBuscador = ({ placeholder, data }) => {
         }
     };
 
+    
     const clearInput = () => {
         setFilteredData([]);
         setWordEntered("");
     };
+    
+    
+    console.log(wordEntered.length);
 
     return (
         <div className="div-buscador">
@@ -50,19 +54,17 @@ const BarraBuscador = ({ placeholder, data }) => {
             }
 
             {
-                filteredData.length != 0 ?
+                filteredData.length > 0 ?
                     (
                     <>
                     <div className="resultados">
-                        {filteredData.slice(0, 15).map(item => <Item key={item.id} {...item} />)}
+                        {filteredData.slice(0, 8).map(item => <Item key={item.id} {...item} />)}
                     </div>
                         <p className="fin-resultados">No hay más resultados encontrados</p>
-                        <hr className="hrs"/>
                     </>
                     ) :
                     <div className="no-hay-prod">
-                        <p>No hay productos buscados</p>
-                        <hr />
+                        <p>No se encuentran productos buscados</p>
                     </div>
             }
 
