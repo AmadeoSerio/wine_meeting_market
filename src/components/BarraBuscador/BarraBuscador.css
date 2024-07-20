@@ -1,9 +1,19 @@
 .div-buscador {
-    text-align: center;
     background-color: #481f4f;
     padding-top: 0rem;
 }
 
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .inputs input {
     background-color: white;
@@ -35,6 +45,7 @@
     color: #ffff;
     background-color: #f94707;
     cursor: pointer;
+    text-align: center;
 }
 
 .fa-xmark {
