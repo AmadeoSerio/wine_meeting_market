@@ -30,13 +30,11 @@ const BarraBuscador = ({ placeholder, data }) => {
         setWordEntered("");
     };
     
-    
-    console.log(wordEntered.length);
 
     return (
         <div className="div-buscador">
             <div className="inputs">
-                <form>
+                <form className="formulario-buscador">
                 <input type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter} />
 
                 {

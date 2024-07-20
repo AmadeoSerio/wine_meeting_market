@@ -4,24 +4,19 @@
     padding-top: 0rem;
 }
 
-.inputs form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .inputs input {
     background-color: white;
     border-radius: 10px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    padding: 15px;
-    height: 30px;
+    height: 34px;
     width: 250px;
     border-right: none;
     border-top: 2px solid #f94707;
     border-bottom: 2px solid #f94707;
     border-left: 2px solid #f94707;
+    margin-top: 0rem;
 }
 
 .inputs input:focus {
@@ -31,7 +26,7 @@
 .fa-magnifying-glass {
     width: 50px;
     right: 3rem;
-    padding-top: .5rem;
+    padding-top: .49rem;
     border: 2px solid #f94707;
     height: 34px;
     border-top-right-radius: 10px;
@@ -45,7 +40,7 @@
 .fa-xmark {
     cursor: pointer;
     background-color: white;
-    padding-top: .5rem;
+    padding-top: .49rem;
     height: 34px;
     border-bottom: #f94707 2px solid;
     border-top: #f94707 2px solid;
