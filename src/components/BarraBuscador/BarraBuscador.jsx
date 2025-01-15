@@ -15,9 +15,12 @@ const BarraBuscador = ({ placeholder, data }) => {
         const searchWord = e.target.value;
         setWordEntered(searchWord);
         const newFilter = data.filter((value) => {
-            return value.nombre.toLowerCase().includes(searchWord.toLowerCase());
+            return (
+                value.nombre &&
+                value.nombre.toLowerCase().includes(searchWord.toLowerCase())
+            );
         });
-        if (searchWord === "") {
+        if(searchWord === "") {
             setFilteredData([])
         } else {
             setFilteredData(newFilter)
@@ -38,10 +41,10 @@ const BarraBuscador = ({ placeholder, data }) => {
                 <input type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter} />
 
                 {
-                    wordEntered.length == 0 ? <i className="fa-solid fa-xmark sin-color" onClick={clearInput}></i> : <i className="fa-solid fa-xmark" onClick={clearInput}></i> 
+                    wordEntered.length === 0 ? <i className="fa-solid fa-xmark sin-color" onClick={clearInput}></i> : <i className="fa-solid fa-xmark" onClick={clearInput}></i> 
                 }
 
-                <i className="fa-solid fa-magnifying-glass" onSubmit={preventor}></i> 
+                <i className="fa-solid fa-magnifying-glass" onClick={preventor}></i> 
                 </form>
             </div>
 
