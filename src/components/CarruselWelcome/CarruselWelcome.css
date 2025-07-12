@@ -1,7 +1,7 @@
 .imagen-promo{
     margin-top: 6rem;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .carousel-inner {
@@ -27,6 +27,10 @@
     font-size: .8rem;
 }
 
+.carousel-indicators{
+        visibility: hidden !important;
+    }
+
 @media screen and (min-width: 1024px) {
     .imagen-promo {
        width: 1200px;
@@ -35,4 +39,6 @@
     .promo-carrusel{
         font-size: 1.5rem;
     }
+
+    
    }
