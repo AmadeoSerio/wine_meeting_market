@@ -1,29 +1,76 @@
-import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
 import './CarruselWelcome.css';
-
 
 function CarruselWelcome() {
   return (
-    <>
-    <Carousel className='carrusel-fondo'>
-      <Carousel.Item>
-        <img className='imagen-promo' src="./img/carrusel1.png" alt="" />
-        {/* <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption> */}
-      </Carousel.Item>
+    <section className="hero-home">
 
-      <Carousel.Item>
-      <img className='imagen-promo' src="./img/carrusel2.png" alt="" />
-        {/* <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption> */}
-      </Carousel.Item>
-    </Carousel>
-    {/* <h3 className='promo-carrusel'> Descuentos llevando más de 2 botellas </h3> */}
-    </>
+      {/* WINE MEETING */}
+      <div className="hero-wine">
+
+        <img
+          className="hero-background"
+          src="/img/vinos_hero.png"
+          alt=""
+        />
+
+        <div className="hero-content hero-content-wine">
+
+          <div className="hero-text">
+            <h2 className="hero-title">
+              Wine <br /> Meeting
+            </h2>
+
+            <p className="hero-description hero-description-wine">
+              Vinos, Destilados y Accesorios para brindar grandes encuentros.
+            </p>
+
+            <Link to="/SectorWineMeeting">
+              <button className="hero-btn">
+                Ver colección
+              </button>
+            </Link>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* AROMAS DE ENCUENTROS */}
+      <div className="hero-aromas">
+
+        <img
+          className="hero-background"
+          src="/img/aromas_hero.png"
+          alt=""
+        />
+
+        <div className="hero-content">
+
+          <div className="hero-text">
+
+            <h2 className="hero-title aromas-title">
+              Aromas <br /> de Encuentros
+            </h2>
+
+            <p className="hero-description hero-description-aromas">
+              Yerbas Orgánicas, Té en Hebras y Accesorios
+            </p>
+
+            <Link to="/SectorAromas">
+              <button className="hero-btn-aromas">
+                Ver colección
+              </button>
+            </Link>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
   );
 }
 

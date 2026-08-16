@@ -1,91 +1,599 @@
-.cart-div{
-    margin-top: 5.5rem;
+/* =========================================
+   CONTENEDOR GENERAL
+========================================= */
+
+.cart-page {
+
+    width: 100%;
+
+    margin-top: 7rem;
+
+    margin-bottom: 5rem;
+
+    padding: 0 2rem;
+
+    box-sizing: border-box;
+}
+
+.cart-page-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 3rem;
+
+    align-items: flex-start;
+}
+
+.carrito-boton-principal{
+    text-decoration: none;
+    color: white;
+    background-color: #5a0d55;
+    padding: .8rem;
+    border-radius: 12px;
+    
+}
+
+/* =========================================
+   LISTADO
+========================================= */
+
+.cart-listado {
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    padding: 2.5rem;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+
+.cart-subtitulo {
+
+    display: block;
+
+    color: #8b7d8b;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: .8rem;
+}
+
+.cart-titulo {
+
+    margin: 0;
+
+    color: #5a0d55;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3rem;
+
+    font-weight: 500;
+}
+
+.cart-descripcion {
+
+    margin-top: 1rem;
+
+    margin-bottom: 2.5rem;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+.cart-items {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+
+/* =========================================
+   RESUMEN
+========================================= */
+
+.cart-resumen {
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    padding: 2rem;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+
+    position: sticky;
+
+    top: 120px;
+}
+
+.cart-resumen h3 {
+
+    margin: 0;
+
+    color: #5a0d55;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    font-weight: 500;
+}
+
+.cart-resumen hr {
+
+    margin: 2rem 0;
+
+    border: none;
+
+    border-top: 1px solid #e5e5e5;
+}
+
+
+/* =========================================
+   TOTALES
+========================================= */
+
+.cart-totales {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+}
+
+.cart-totales div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.cart-totales span {
+
+    color: #666;
+}
+
+.cart-totales strong {
+
+    color: #5a0d55;
+
+    font-size: 1.2rem;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.cart-botones {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.cart-boton-principal {
+
+    width: 100%;
+
+    height: 56px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #5a0d55;
+
+    color: white;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .25s;
+}
+
+.cart-boton-principal:hover {
+
+    background: #481f4f;
+
+    color: white;
+}
+
+.cart-boton-secundario {
+
+    width: 100%;
+
+    height: 56px;
+
+    background: white;
+
+    color: #5a0d55;
+
+    border: 2px solid #5a0d55;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .25s;
+}
+
+.cart-boton-secundario:hover {
+
+    background: #5a0d55;
+
+    color: white;
+}
+
+
+/* =========================================
+   CARRITO VACÍO
+========================================= */
+
+.carrito-vacio-section {
+
+    width: 100%;
+
+    margin-top: 7rem;
+
+    margin-bottom: 5rem;
+
+    padding: 0 2rem;
+
+    box-sizing: border-box;
+}
+
+.carrito-vacio-container {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 24px;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+
+    padding: 3rem;
+
+    text-align: center;
+}
+
+.carrito-vacio-img {
+
+    width: 220px;
+
+    margin-bottom: 1.5rem;
+}
+
+.carrito-vacio-titulo {
+
+    color: #5a0d55;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3rem;
+
     margin-bottom: 1rem;
 }
 
-.titulo-carrito{
-    color: #481f4f;
+.carrito-vacio-texto {
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 2rem;
 }
 
-.cart-div h3{
-    font-weight: 600;
-    font-size: 1.2rem;
-    }
+.carrito-subtitulo {
 
-.botones-cart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin-top: 1rem;
-}
+    display: block;
 
-.botones-cart button {
-    background-color: black;
-    border-radius: .4rem;
-    color: #ffff;
-    border: none;
-    width: 8rem;
-    height: 2rem;
-}
+    color: #8b7d8b;
 
-.finalizar-pedido {
-    background-color: #481f4f;
-    border-radius: .4rem;
-    color: #ffff;
-    border: none;
-    width: 8rem;
-    height: 2rem;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    font-size: .85rem;
 
+    letter-spacing: 3px;
 
-.carritoVacio {
-    margin-top: 8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.carritoVacio h2{
-    color: #481f4f;
-    font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 3rem;
+
+    margin-bottom: .8rem;
 }
 
-.carritoVacio div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+/* =========================================
+   SWEET ALERT - WINE MEETING
+========================================= */
+
+.wm-alert{
+    width: min(92vw, 500px) !important;
+    border-radius: 22px !important;
+    padding: 2.5rem 2rem !important;
+    background: #ffffff !important;
+    box-shadow: 0 15px 45px rgba(0,0,0,.12);
 }
 
-.carrito-vacio{
-    width: 20rem;
-    margin-left: -3.5rem;
-    margin-top: -2rem;
-    margin-bottom: -1rem;
-    z-index: -1;
+.wm-alert-title{
+    color:#481f4f !important;
+    font-size:2rem !important;
+    font-weight:600 !important;
+    margin-bottom: 1rem !important;
 }
 
-.botonVerProd{
-    display: flex;
-    justify-content: center;
-    background-color: #481f4f;
-    border-radius: .4rem;
-    color: #ffff;
-    padding: .6rem 1rem;
-    border: none;
-    width: 10.1rem;
-    text-decoration: none;
+.wm-alert-text{
+    color:#666 !important;
+    font-size:1rem !important;
+    line-height:1.6 !important;
+    margin-bottom: 2rem !important;
 }
 
-.swal2-cancel{
-    background-color: grey !important;
+.swal2-actions{
+    gap:1rem;
+    margin-top:2rem !important;
+}
+
+.wm-btn-confirm{
+
+    background:#5a0d55;
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    height:48px;
+    width:170px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.wm-btn-confirm:hover{
+
+    background:#481f4f;
+    transform:translateY(-2px);
+
+}
+
+.wm-btn-cancel{
+
+    background:#f4f4f4;
+
+    color:#555;
+
+    border:none;
+
+    border-radius:12px;
+
+    height:48px;
+    width:170px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.wm-btn-cancel:hover{
+
+    background:#e4e4e4 !important;
+
+}
+
+.wm-btn-confirm,
+.wm-btn-cancel{
+    transition: .25s ease;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width:1024px){
+
+.cart-page{
+
+padding:0 1.5rem;
+
+}
+
+.cart-page-container{
+
+gap:2rem;
+
+}
+
+.cart-listado{
+
+padding:2rem;
+
+}
+
+.cart-titulo{
+
+font-size:2.5rem;
+
+}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width:768px){
+
+.cart-page{
+
+margin-top:6rem;
+
+padding:0 1rem;
+
+}
+
+.cart-page-container{
+
+grid-template-columns:1fr;
+
+gap:2rem;
+
+}
+
+.cart-listado{
+
+padding:1.5rem;
+
+}
+
+.cart-resumen{
+
+position:static;
+
+padding:1.5rem;
+
+}
+
+.cart-titulo{
+
+font-size:2.2rem;
+
+}
+
+.cart-descripcion{
+
+font-size:.95rem;
+
+}
+
+.cart-boton-principal,
+
+.cart-boton-secundario{
+
+height:52px;
+
+}
+
+.carrito-vacio-section{
+
+padding:0 1rem;
+
+}
+
+.carrito-vacio-container{
+
+padding:2rem 1.5rem;
+
+}
+
+.carrito-vacio-img{
+
+width:170px;
+
+}
+
+.carrito-vacio-titulo{
+
+font-size:2.3rem;
+
+}
+
+}
+
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media screen and (max-width:480px){
+
+.cart-page{
+
+margin-top:5.5rem;
+
+}
+
+.cart-listado{
+
+padding:1.2rem;
+
+}
+
+.cart-resumen{
+
+padding:1.2rem;
+
+}
+
+.cart-titulo{
+
+font-size:1.9rem;
+
+}
+
+.cart-subtitulo{
+
+font-size:.75rem;
+
+letter-spacing:2px;
+
+}
+
+.carrito-vacio-container{
+
+padding:1.5rem 1rem;
+
+}
+
+.carrito-vacio-titulo{
+
+font-size:1.9rem;
+
+}
+
+.carrito-vacio-img{
+
+width:140px;
+
+}
+
 }

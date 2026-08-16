@@ -1,0 +1,594 @@
+/* =========================================
+   HERO WINE MEETING
+========================================= */
+
+.hero-sector-wine {
+    width: 100%;
+
+    min-height: clamp(650px, 70vw, 900px);
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 45%,
+            rgba(255, 255, 255, 0.35) 70%,
+            rgba(255, 255, 255, 0.95) 100%
+        ),
+        url("/img/hero_sector_wine.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    text-align: center;
+
+    padding: 0 2rem 5rem;
+
+    box-sizing: border-box;
+
+    margin-bottom: -2rem;
+
+}
+
+
+/* =========================================
+   TÍTULO PRINCIPAL
+========================================= */
+
+.titulo-wine {
+
+    margin: 0;
+    
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 5.5vw, 5.5rem);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #54204d;
+
+    text-align: center;
+}
+
+
+.descripcion-hero {
+
+    margin: 1.5rem 0 0;
+
+    margin-bottom: 18rem;
+
+
+    max-width: 700px;
+
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+
+    line-height: 1.6;
+
+    color: #3f3f3f;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CATEGORÍAS
+========================================= */
+
+.categorias-wine {
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 3rem 2rem 4rem;
+
+    box-sizing: border-box;
+}
+
+
+.titulo_categorias_sectorWine {
+
+    margin: 0 0 3rem;
+
+    text-align: center;
+
+    color: #54204d;
+}
+
+
+/* =========================================
+   CONTENEDOR DE CATEGORÍAS
+========================================= */
+
+.contenedor-categorias-wine {
+
+    width: 100%;
+
+    margin: 0;
+
+    margin-bottom: -2rem;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.contenedor-categorias-wine .sub-contenedor {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: stretch;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   CADA CATEGORÍA
+========================================= */
+
+.categoria-link {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    padding: 0 1rem;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    box-sizing: border-box;
+}
+
+
+.categoria-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   IMÁGENES
+========================================= */
+
+.img-categorias-sector {
+
+    width: 100px;
+
+    height: 100px;
+
+    object-fit: contain;
+
+    margin: 0 0 1rem;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.texto_categorias_wine {
+
+    margin: 0;
+
+    color: #5a0d55;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.1rem;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   FLECHA
+========================================= */
+
+.flecha-categoria {
+
+    display: none;
+}
+
+
+/* =========================================
+   SEPARADORES DESKTOP
+========================================= */
+
+.contenedor-categorias-wine .hr-vertical {
+
+    width: 1px;
+
+    height: 120px;
+
+    margin: auto 0;
+
+    border: none;
+
+    background-color: #d7d0d7;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   TÍTULO PRODUCTOS
+========================================= */
+
+.contenedor-titulo-productos {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    margin: 2rem 0 1rem;
+
+    padding: 0 2rem;
+}
+
+
+.contenedor-titulo-productos::before,
+.contenedor-titulo-productos::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #d7d0d7;
+}
+
+
+.productos-titulo {
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #5a0d55;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .hero-sector-wine {
+
+        min-height: 650px;
+
+        padding-bottom: 4rem;
+
+        background-position: center center;
+    }
+
+
+    .contenedor-categorias-wine .sub-contenedor {
+
+        max-width: 800px;
+    }
+
+
+    .categoria-link {
+
+        padding: 0 .5rem;
+    }
+
+
+    .img-categorias-sector {
+
+        width: 80px;
+
+        height: 80px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* -----------------------------
+       HERO
+    ----------------------------- */
+
+    .hero-sector-wine {
+
+        min-height: 600px;
+
+        padding: 0 1.5rem 3rem;
+
+        background-size: cover;
+
+        background-position: center center;
+    }
+
+
+    .titulo-wine {
+
+        font-size: clamp(2.8rem, 12vw, 4rem);
+
+        line-height: .95;
+    }
+
+
+    .descripcion-hero {
+
+        margin-top: 1rem;
+
+        font-size: 1rem;
+
+        max-width: 90%;
+    }
+
+
+    /* -----------------------------
+       CATEGORÍAS
+    ----------------------------- */
+
+    .categorias-wine {
+
+        padding: 2.5rem 1rem 3rem;
+    }
+
+
+    .titulo_categorias_sectorWine {
+
+        font-size: 1.4rem;
+
+        margin-bottom: 1.5rem;
+    }
+
+
+    .contenedor-categorias-wine {
+
+        width: 100%;
+    }
+
+
+    .contenedor-categorias-wine .sub-contenedor {
+
+        width: 100%;
+
+        max-width: 600px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    /* -----------------------------
+       CADA CATEGORÍA
+    ----------------------------- */
+
+    .categoria-link {
+
+        width: 100%;
+
+        min-height: 90px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding: .75rem 1rem;
+
+        box-sizing: border-box;
+    }
+
+
+    .categoria-item {
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        width: auto;
+    }
+
+
+    /* -----------------------------
+       IMAGEN
+    ----------------------------- */
+
+    .img-categorias-sector {
+
+        width: 65px;
+
+        height: 65px;
+
+        margin: 0 1.5rem 0 0;
+    }
+
+
+    /* -----------------------------
+       TEXTO
+    ----------------------------- */
+
+    .texto_categorias_wine {
+
+        margin: 0;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 1rem;
+
+        text-align: left;
+    }
+
+
+    /* -----------------------------
+       FLECHA
+    ----------------------------- */
+
+    .flecha-categoria {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        color: #5a0d55;
+
+        font-size: 1.5rem;
+
+        transition: transform .2s ease;
+    }
+
+
+    .categoria-link:hover .flecha-categoria {
+
+        transform: translateX(5px);
+    }
+
+
+    /* -----------------------------
+       SEPARADORES
+    ----------------------------- */
+
+    .contenedor-categorias-wine .hr-vertical {
+
+        width: 100%;
+
+        height: 1px;
+
+        margin: 0;
+
+        background-color: #d7d0d7;
+    }
+
+
+    /* -----------------------------
+       TÍTULO PRODUCTOS
+    ----------------------------- */
+
+    .contenedor-titulo-productos {
+
+        gap: 1rem;
+
+        padding: 0 1rem;
+
+        margin-top: 1rem;
+    }
+
+
+    .productos-titulo {
+
+        font-size: 1.2rem;
+
+        white-space: nowrap;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .hero-sector-wine {
+
+        min-height: 550px;
+
+        padding-bottom: 2.5rem;
+    }
+
+
+    .titulo-wine {
+
+        font-size: 2.7rem;
+    }
+
+
+    .descripcion-hero {
+
+        font-size: .9rem;
+    }
+
+
+    .img-categorias-sector {
+
+        width: 55px;
+
+        height: 55px;
+
+        margin-right: 1rem;
+    }
+
+
+    .texto_categorias_wine {
+
+        font-size: .9rem;
+    }
+
+
+    .categoria-link {
+
+        min-height: 80px;
+
+        padding: .5rem;
+    }
+
+}

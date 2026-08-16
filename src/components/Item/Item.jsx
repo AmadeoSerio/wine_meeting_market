@@ -21,24 +21,33 @@ const {agregarAlCarrito} = useContext(CarritoContext);
 
 const manejadorCantidad = (cantidad) => {
   setAgregarCantidad(cantidad);
-  const item = {id, nombre, precio, varietal};
+  const item = {id, nombre, precio, varietal, img};
   agregarAlCarrito(item, cantidad);
 }
 
     return (
 
       <Card className='d-flex card'>
-        <Card.Img variant="top" src={img} className='img-vino'/>
+        <Card.Img variant="top" 
+        
+        
+        //OJO ACÁ, HAY QUE CAMBIAR EL FIREBASE 
+        src={img.replace("./img", "/img")}
+        //
+        className='img-vino'/>
+        
         <Card.Body className='card-body'>
-          <Card.Title className='text1'>{nombre}</Card.Title>
-          {/* <Card.Title className='text2'>${precio}</Card.Title> */}
           <Card.Title className='text3 varietal'>{varietal}</Card.Title>
+          <Card.Title className='text1'>{nombre}</Card.Title>
           <Card.Title className='text4'>{bodega}</Card.Title>
-          <Card.Text className='text5'>
+          <div className='precio-botones-div'>
+          <Card.Title className='text2'>${precio}</Card.Title>
+          {/* <Card.Text className='text5'>
             {descripcion}
-          </Card.Text>
+          </Card.Text> */}
           
           {agregarCantidad > 0 ? (<Link to="/carrito" className='boton-ir-carrito' onClick={scrollToTop}>Ir al carrito</Link>): stock == true ? <Counter inicial={1} funcionAgregar={manejadorCantidad}/> : <p>SIN STOCK</p>}
+        </div>
         </Card.Body>
       </Card>
       

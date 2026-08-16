@@ -5,8 +5,13 @@ import { getDocs, collection, query, where } from "firebase/firestore";
 import ItemList from "../ItemList/ItemList";
 import CarruselWelcome from "../CarruselWelcome/CarruselWelcome";
 import BarraBuscador from "../BarraBuscador/BarraBuscador";
+import Categorias from "../Categorias/Categorias";
+import Destacados from "../Destacados/Destacados";
+import BenefitsSection from "../BenefitsSection/BenefitsSection";
+import { Link, NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import BotonUp from "../BotonUp/BotonUp";
+import './ItemListContainer.css'
 
 
 
@@ -14,6 +19,15 @@ const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
     const [todos, setTodos] = useState([])
     const [error, setError] = useState("");
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto'
+            /* you can also use 'auto' behaviour 
+               in place of 'smooth' */
+        });
+    };
 
     const { idCategoria } = useParams();
 
@@ -32,17 +46,17 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const misProductos = idCategoria ? query(collection(db, "inventario"), where
-        ("categoria", "==", idCategoria)) : collection(db, "inventario");
+            ("categoria", "==", idCategoria)) : collection(db, "inventario");
 
         getDocs(misProductos)
-        .then(res => {
-            const nuevosProductos = res.docs.map (doc => {
-                const data = doc.data()
-                return {id:doc.id, ...data}
+            .then(res => {
+                const nuevosProductos = res.docs.map(doc => {
+                    const data = doc.data()
+                    return { id: doc.id, ...data }
+                })
+                setProductos(nuevosProductos)
             })
-            setProductos(nuevosProductos)
-        })
-        .catch(error => setError(alertaError(error)));
+            .catch(error => setError(alertaError(error)));
 
     }, [idCategoria])
 
@@ -50,22 +64,31 @@ const ItemListContainer = () => {
         const todosProductos = collection(db, "inventario");
 
         getDocs(todosProductos)
-        .then(res => {
-            const traigoTodos = res.docs.map (doc =>{
-                const data = doc.data()
-                return {id:doc.id, ...data}
+            .then(res => {
+                const traigoTodos = res.docs.map(doc => {
+                    const data = doc.data()
+                    return { id: doc.id, ...data }
+                })
+                setTodos(traigoTodos)
             })
-            setTodos(traigoTodos)
-        })
-        .catch(error => setError(alertaError(error)))
+            .catch(error => setError(alertaError(error)))
     }, [])
 
     return (
         <>
             <CarruselWelcome />
-            <BarraBuscador data={todos} placeholder="Buscar por nombre"/>
-            <ItemList productos={productos} />
-            <BotonUp/>
+            <Categorias />
+            {/* <ItemList productos={productos} />
+            <BarraBuscador data={todos} placeholder="Buscar por nombre"/> */}
+
+            <Destacados />
+            <div className="contenedor-boton">
+                <Link className="boton-ver-todos" to='/SectorTodos' onClick={scrollToTop}>
+                    VER TODOS LOS PRODUCTOS</Link>
+            </div>
+
+            <BenefitsSection />
+            <BotonUp />
         </>
     )
 }

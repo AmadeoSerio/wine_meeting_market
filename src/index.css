@@ -5,3 +5,14 @@
     justify-content: space-between;
   }
 
+p{
+  font-family: 'Lora', serif;
+}
+
+a{
+  font-family: 'Lora', serif;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Lora', serif
+}

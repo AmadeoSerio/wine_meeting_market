@@ -1,73 +1,171 @@
 .botones-item {
     display: flex;
-    justify-content: center;
+
     align-items: center;
-}
 
-.boton-agregar{
-    background-color: #f94707;
-    border: 1px solid #f94707;
-    margin-right: .5rem;
-    margin-top: -.5rem;
-    margin-bottom: -.5rem;
-    font-size: .9rem;
-}
-
-.boton-cantidad{
-    background-color: #481f4f00;
-    color: black;
-    border: 2px solid #481f4f;
-    border-radius: 5px;
-    width: 1.9rem;
-    margin-top: -.5rem;
-    margin-bottom: -.5rem;
-}
-
-.numero-producto{
-    margin-right: .2rem;
-    margin-left: .2rem;
-    margin-top: -.5rem;
-    margin-bottom: -.5rem;
-}
-
-.swal2-top-end{
-    margin-top: 4.5rem;
-    width: 19rem !important;
-}
-
-.swal2-top-end .swal2-popup{
-    display: flex !important;
     justify-content: flex-end;
+
+    gap: 0.1rem;
+
+    white-space: nowrap;
+}
+
+
+.boton-agregar {
+    background-color: #5a0d55;
+
+    border: none;
+
+    border-radius: 10px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+
     align-items: center;
-    height: 4rem;
+
+    padding: 0;
+
+    flex-shrink: 0;
+
+    transition: .5s;
 }
 
-.swal2-top-end .swal2-popup .swal2-confirm {
-    display: flex !important;
-   justify-content: center !important;
-   align-items: center !important;
-   width: 2.5rem;
-   color: black;
+.btn-primary {
+  --bs-btn-hover-bg: #791272;
 }
 
-.boton-agregar:hover{
-    background-color: #dc3b00;
-    border: 1px solid transparent;
+
+
+
+.boton-agregar i {
+    color: white;
+
+    font-size: 1rem;
+
+    line-height: 1;
+
+    margin: 0;
+
+    padding: 0;
 }
 
-.boton-agregar:active{
-    background-color: #dc3b00 !important;
-    border: 1px solid transparent !important;
+.boton-agregar i:hover{
+    color: white;
 }
 
-.boton-agregar:focus-visible{
-    background-color: #dc3b00 !important;
-    border: 1px solid transparent !important;
-    box-shadow: none;
+.boton-cantidad {
+    background-color: transparent;
+
+    color: #000;
+
+    border: none;
+
+    border-radius: 5px;
+
+    width: 1.4rem;
+
+    height: 2rem;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
 }
 
-@media screen and (min-width: 1024px) {
+
+.numero-producto {
+    min-width: 1rem;
+
+    text-align: center;
+
+    margin: 0;
+
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   SWEET ALERT TOAST
+========================================= */
+
+.swal-toast{
+
+    border-radius:18px !important;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15) !important;
+
+    border:1px solid #ece7eb;
+
+    padding:1rem 1.2rem !important;
+
+}
+
+.swal-toast-title{
+
+    color:#5a0d55 !important;
+
+    font-size:1.05rem !important;
+
+    font-weight:700 !important;
+
+}
+
+.swal-toast-text{
+
+    color:#666 !important;
+
+    font-size:.92rem !important;
+
+}
+
+.swal2-timer-progress-bar{
+
+    background:#5a0d55 !important;
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .botones-item {
+        gap: 0;
+
+        transform: scale(0.85);
+
+        transform-origin: right center;
+    }
+
     .boton-agregar {
-        font-size: 1.2rem;
-    }   
-   }
+        width: 34px;
+        height: 34px;
+
+        border-radius: 9px;
+    }
+
+    .boton-agregar i {
+        font-size: 0.9rem;
+    }
+
+    .boton-cantidad {
+        width: 1.2rem;
+        height: 1.8rem;
+        padding: 0 1rem;
+    }
+
+    .numero-producto {
+        font-size: 0.8rem;
+
+        min-width: 0.8rem;
+    }
+
+}

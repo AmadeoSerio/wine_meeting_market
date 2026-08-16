@@ -1,0 +1,219 @@
+/* =========================================
+   SECCIÓN
+========================================= */
+
+.degustaciones {
+    width: 100%;
+    padding: 6rem 2rem;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.contenedor-degustaciones {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.degustaciones-texto {
+    flex: 1;
+    max-width: 650px;
+}
+
+.subtitulo-degustaciones {
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #8a7d4f;
+}
+
+.titulo-degustaciones {
+    margin: 0 0 2rem;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.7rem,4vw,4rem);
+    font-weight: 500;
+    line-height: 1.1;
+
+    color: #5a0d55;
+}
+
+.degustaciones-texto p {
+    margin-bottom: 1.5rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+
+    color: #555;
+}
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.degustaciones-imagen {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.degustaciones-imagen img {
+
+    margin-top: 1rem;
+
+    width: 100%;
+    max-width: 560px;
+
+    border-radius: 24px;
+
+    display: block;
+
+    object-fit: cover;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .degustaciones{
+
+        padding:5rem 2rem;
+
+    }
+
+    .contenedor-degustaciones{
+
+        gap:3rem;
+
+    }
+
+    .titulo-degustaciones{
+
+        font-size:3rem;
+
+    }
+
+    .degustaciones-texto p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .degustaciones{
+
+        padding:4rem 1.5rem;
+
+    }
+
+    .contenedor-degustaciones{
+
+        flex-direction:column-reverse;
+
+        gap:2.5rem;
+
+    }
+
+    .degustaciones-texto{
+
+        max-width:100%;
+
+    }
+
+    .subtitulo-degustaciones{
+
+        font-size:.8rem;
+
+        letter-spacing:2px;
+
+    }
+
+    .titulo-degustaciones{
+
+        font-size:2.5rem;
+
+        margin-bottom:1.5rem;
+
+    }
+
+    .degustaciones-texto p{
+
+        font-size:.97rem;
+
+        line-height:1.8;
+
+        margin-bottom:1.2rem;
+
+    }
+
+    .degustaciones-imagen img{
+
+        margin-top: 2rem;
+
+        max-width:100%;
+
+        border-radius:18px;
+
+    }
+
+}
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media (max-width:480px){
+
+    .degustaciones{
+
+        padding:3rem 1rem;
+
+    }
+
+    .titulo-degustaciones{
+
+        font-size:2.1rem;
+
+    }
+
+    .degustaciones-texto p{
+
+        font-size:.92rem;
+
+    }
+
+}

@@ -1,79 +1,385 @@
-.img-vino{
-    width: 90%;
-    align-self: center;
-    border-radius: 5%;
-    padding-top: .5rem;
-}
-
-.card-estilo{
-    width: 45%;
-    display: flex;
-    flex-direction: row;
-}
+/* =========================================
+   CARD BASE
+========================================= */
 
 .card {
-    border-radius: 0;
-    width: 48%;
-}
+    width: 100%;
+    min-width: 0;
 
-.text1 {
-    font-weight: 400;
-    color: black;
-    font-size: 1rem;
-    text-transform: uppercase;
-
-}
-
-.text2 {
-    font-weight: 500;
-    font-size: .8rem;
-    text-transform: uppercase;
-}
-
-.text3 {
-    font-weight: 400;
-    font-size: .8rem;
-}
-
-.text4 {
-    font-size: .8rem;
-}
-
-.text5 {
-    font-size: .7rem;
-}
-
-.boton-ir-carrito{
-    color: #ffff;
-    background-color: #f94707;
-    border: 1px solid #f94707;
-    cursor: pointer;
-    padding: 0.355rem 0.55rem ;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
-    border-radius:7px;
-}
-
-.card-body{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    background-color: white;
+
+    box-sizing: border-box;
 }
 
-.varietal{
-    color: #f94707;
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.img-vino {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-@media screen and (min-width: 1024px) {
- .card {
-    width: 300px;
- }   
- .text1{
-    font-size: 1.8rem;
- }
- .text2, .text3, .text4, .text5{
+
+/* =========================================
+   CUERPO DE LA CARD
+========================================= */
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-width: 0;
+
+    padding: 1rem;
+}
+
+
+/* =========================================
+   VARIETAL
+========================================= */
+
+.varietal {
+    font-family: "Montserrat", sans-serif;
+
+    color: #5a0d55;
+
+    text-transform: uppercase;
+
+    font-size: 0.8rem !important;
+
+    margin-bottom: 0.4rem;
+}
+
+
+/* =========================================
+   NOMBRE
+========================================= */
+
+.text1 {
+    color: #5a0d55;
+
+    font-family: "Lora", serif;
+
+    font-size: 1rem !important;
+
+    font-weight: bold;
+
+    text-transform: capitalize;
+
+    margin-bottom: 0.4rem;
+}
+
+
+/* =========================================
+   BODEGA
+========================================= */
+
+.text4 {
+    font-family: "Lora", serif;
+
+    font-size: 0.8rem !important;
+
+    text-transform: uppercase;
+
+    padding-bottom: 1rem;
+}
+
+
+/* =========================================
+   PRECIO
+========================================= */
+
+.text2 {
+    color: #5a0d55;
+
     font-size: 1rem;
- }
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.text5 {
+    font-size: 0.7rem;
+}
+
+
+/* =========================================
+   PRECIO + COUNTER
+========================================= */
+
+.precio-botones-div {
+    width: 100%;
+
+    min-height: 2rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 0.5rem;
+
+    margin-top: auto;
+}
+
+
+/* =========================================
+   BOTÓN IR AL CARRITO
+========================================= */
+
+.boton-ir-carrito {
+    color: #5a0d55;
+
+    background-color: white;
+
+    border: 1px solid #5a0d55;
+
+    cursor: pointer;
+
+    padding: 0.355rem 0.55rem;
+
+    display: inline-block;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media screen and (min-width: 993px) {
+
+    .card {
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .text1 {
+        font-size: 1rem !important;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+
+    .card-body {
+        padding: 0.8rem;
+    }
+
+    .varietal {
+        font-size: 0.7rem !important;
+    }
+
+    .text1 {
+        font-size: 0.9rem !important;
+    }
+
+    .text4 {
+        font-size: 0.7rem !important;
+    }
+
+    .text2 {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 767px) {
+
+    .card {
+        width: 100% !important;
+
+        display: flex !important;
+
+        min-height: 80px;
+
+
+
+        overflow: hidden;
+
+        margin-bottom: 0;
+    }
+
+
+    /* Imagen móvil */
+
+    .img-vino {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+
+        display: block;
+    }
+
+
+    /* Información */
+
+    .card-body {
+        min-width: 0;
+
+        padding: 7px 8px 7px 4px;
+
+        justify-content: center;
+    }
+
+
+    /* Varietal */
+
+    .varietal {
+        font-size: 0.55rem !important;
+
+        line-height: 1.1;
+
+        margin-bottom: 2px;
+    }
+
+
+    /* Nombre */
+
+    .text1 {
+        font-size: 0.75rem !important;
+
+        line-height: 1.2;
+
+        margin-bottom: 3px;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* Ocultamos bodega */
+
+    .text4 {
+        display: none;
+    }
+
+
+    /* Precio + Counter */
+
+     .precio-botones-div {
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 0.2rem;
+
+        min-width: 0;
+    }
+
+
+    /* Precio */
+
+    .text2 {
+        font-size: 1rem !important;
+
+        margin: 0;
+
+        white-space: nowrap;
+    }
+
+
+    /* Botón carrito */
+
+    .boton-ir-carrito {
+        font-size: 1rem;
+
+        padding: 3px 10px;
+
+        border-radius: 8px;
+
+        white-space: nowrap;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+
+    .card-body {
+        padding: 5px 6px 5px 3px;
+    }
+
+    .varietal {
+        font-size: 0.5rem !important;
+    }
+
+    .text1 {
+        font-size: 0.7rem !important;
+    }
+
+    .text2 {
+        font-size: 0.87rem !important;
+    }
+
+    .boton-ir-carrito {
+        font-size: 0.8rem;
+
+        padding: 3px 5px;
+    }
+
+    .botones-item {
+        transform: scale(0.75);
+
+        transform-origin: right center;
+    }
+
 }

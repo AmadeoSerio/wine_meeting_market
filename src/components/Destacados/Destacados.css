@@ -1,0 +1,23 @@
+.div-titulo-destacados{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.div-titulo-destacados::before,
+.div-titulo-destacados::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:#d7d0d7;
+}
+
+.titulo-destacados {
+    text-align: center;
+    color: #5a0d55;
+    text-transform: uppercase;
+}

@@ -1,0 +1,43 @@
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.boton-ver-todos{
+    margin-top: -1rem;
+    width: 25rem;
+    padding: .8rem 3rem;
+    border: 2px solid #cdb9c9;
+    border-radius: 8px;
+    background: transparent;
+
+    color: #5a0d55;
+    text-decoration: none;
+    text-align: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+.boton-ver-todos:hover{
+    background: #5a0d55;
+    color: white;
+}
+
+@media screen and (max-width: 767px) {
+
+
+.boton-ver-todos {
+    width: auto;
+    padding: .3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+}

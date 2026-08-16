@@ -1,33 +1,80 @@
 import './Nosotras.css'
 
-const scrollToTop = () =>{ 
-  window.scrollTo({ 
-    top: 0,  
-    behavior: 'smooth'
-    /* you can also use 'auto' behaviour 
-       in place of 'smooth' */
-  }); 
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 };
 
 const Nosotras = () => {
-  scrollToTop();
-  return (
-    <>
-    <div className='nosotras-div container'>
-        <h2>Nosotras</h2>
-        <p>Somos Marianela y Eliana, somos hermanas y juntas hemos iniciado este proyecto de nuestra propia vinoteca, del cual recibe el nombre de wine meeting que quiere decir encuentros entre vinos... Lo elegimos así porque pensamos que cuando compartimos una copa de vino siempre lo hacemos en compañía ya sea familia, amigos pareja.</p>
-        <div className='div-foto'>
-        <img className='img-nosotras' src="./img/nosotras.jpeg" alt="Marianela y Eliana posando en Wine Meeting" />
-        </div>
-        <p>Queremos través de este emprendimiento poder comunicarles la historia que hay detrás de cada vino.</p>
-        <p>Les contamos que contamos con un amplia variedad de vinos incluyendo los de alta gama, también contamos con destilados, licores, y algún que otro accesorio como: posa copas, identificadores, copas, destilados y como si fuera poco contamos también con toda la linea de productos de mi campo y terruño.</p>
-        <p>Ofrecemos talleres, desgustaciones y servicio por copa (todo con reserva previa).</p>
-        <p>Nos pueden seguir en nuestra cuenta de Instagram <a className='insta-etiqueta' target='blank' href="https://www.instagram.com/wine.meeting_/">@wine.meeting</a></p>
-        <p>Estamos ubicadas actualmente en casa Amalfi al 272 de la calle Emilio Civit de ciudad Mendoza. </p>
-        <p>Los esperamos para compartir grandes encuentros.</p>
-    </div>
-    </>
-  )
+
+    scrollToTop();
+
+    return (
+
+        <section className="nosotras">
+
+            <div className="contenedor-nosotras">
+
+                <div className="nosotras-texto">
+
+                    <span className="subtitulo-nosotras">
+                        NUESTRA HISTORIA
+                    </span>
+
+                    <h2 className="titulo-nosotras">
+                        Dos hermanas, una misma pasión
+                    </h2>
+
+                    <p>
+                        Somos Marianela y Eliana, hermanas y creadoras de <strong>Wine Meeting & Aromas de Encuentro</strong>. Este proyecto nació de nuestra pasión por compartir momentos alrededor de una copa de vino, un buen mate o una taza de té, porque creemos que los mejores recuerdos siempre comienzan con un encuentro.
+                    </p>
+
+                    <p>
+                        Nuestro objetivo es acercarte productos cuidadosamente seleccionados y transmitir la historia que hay detrás de cada uno. Nos apasiona descubrir nuevos sabores, conocer sus orígenes y compartir esa experiencia con quienes nos eligen.
+                    </p>
+
+                    <p>
+                        Trabajamos con una amplia selección de vinos, destilados, licores y accesorios para disfrutar cada brindis. Además, ofrecemos yerbas orgánicas, tés en hebras y todos los complementos necesarios para que cada momento tenga un valor especial.
+                    </p>
+
+                    <p>
+                        También organizamos degustaciones y encuentros con reserva previa, donde buscamos que aprender, descubrir y compartir sean parte de una misma experiencia.
+                    </p>
+
+                    <p>
+                        Gracias por acompañarnos en este camino. Esperamos que cada producto que llegue a tus manos sea la excusa perfecta para crear un nuevo encuentro.
+                    </p>
+
+                    <p className="instagram-nosotras">
+                        Seguinos en Instagram
+                        <a
+                            href="https://www.instagram.com/wine.meeting_/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            @wine.meeting
+                        </a>
+                    </p>
+
+                </div>
+
+                <div className="nosotras-imagen">
+
+                    <img
+                        src="/img/nosotras.jpeg"
+                        alt="Marianela y Eliana"
+                    />
+
+                </div>
+
+            </div>
+
+        </section>
+
+    )
+
 }
 
-export default Nosotras
+export default Nosotras;

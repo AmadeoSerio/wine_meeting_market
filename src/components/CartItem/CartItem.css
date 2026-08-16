@@ -1,34 +1,343 @@
+/* =========================================
+   ITEM
+========================================= */
+
 .cart-item{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+
+display:flex;
+
+align-items:center;
+
+gap:1.5rem;
+
+padding-bottom:1.5rem;
+
+border-bottom:1px solid #ececec;
+
 }
 
-.boton-eliminar{
-    background-color: rgba(0, 255, 255, 0);
-    border-radius: .3rem;
-    color: #481f4f;
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.cart-item-imagen{
+
+width:90px;
+
+height:90px;
+
+flex-shrink:0;
+
+border-radius:16px;
+
+overflow:hidden;
+
+background:#fafafa;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
 }
 
-.info-cart h4{
-font-weight: 600;
-font-size: 1.2rem;
+.cart-item-imagen img{
+
+width:100%;
+
+height:100%;
+
+object-fit:contain;
+
 }
 
-.info-cart p {
-    margin: 0;
+
+/* =========================================
+   INFO
+========================================= */
+
+.cart-item-info{
+
+flex:1;
+
+min-width:0;
+
 }
 
-.swal2-modal .swal2-title{
-      font-size: 1.2rem;
+.cart-item-varietal{
+
+display:block;
+
+margin-bottom:.35rem;
+
+font-size:.75rem;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#8a7b89;
+
+font-weight:600;
+
 }
 
-.swal2-modal .swal2-confirm {
-    width: 7rem !important;
+.cart-item-info h4{
+
+margin:0 0 .6rem;
+
+font-family:"Cormorant Garamond", serif;
+
+font-size:1.7rem;
+
+font-weight:500;
+
+color:#5a0d55;
+
 }
 
-.swal2-modal .swal2-cancel {
-    width: 7rem !important;
+.cart-item-info p{
+
+margin:0;
+
+color:#666;
+
+}
+
+.cart-item-info strong{
+
+color:#5a0d55;
+
+}
+
+
+/* =========================================
+   PRECIO
+========================================= */
+
+.cart-item-precio{
+
+font-size:1.25rem;
+
+font-weight:700;
+
+color:#5a0d55;
+
+white-space:nowrap;
+
+}
+
+
+/* =========================================
+   BOTÓN ELIMINAR
+========================================= */
+
+.cart-item-eliminar{
+
+width:46px;
+
+height:46px;
+
+border:none;
+
+border-radius:12px;
+
+background:#faf7fa;
+
+color:#5a0d55;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.cart-item-eliminar:hover{
+
+background:#5a0d55;
+
+color:white;
+
+}
+
+/* =========================================
+   SWEET ALERT
+========================================= */
+
+.swal-popup{
+
+border-radius:24px !important;
+
+padding:2rem 2rem 1.7rem;
+
+}
+
+.swal-title{
+
+font-family:"Cormorant Garamond", serif !important;
+
+font-size:2.4rem !important;
+
+font-weight:600 !important;
+
+color:#5a0d55 !important;
+
+}
+
+.swal-text{
+
+font-size:1.05rem !important;
+
+color:#666 !important;
+
+margin-top:.5rem;
+
+}
+
+.swal-btn-confirm{
+
+background:#5a0d55 !important;
+
+color: white;
+
+border-radius:12px !important;
+
+padding:.8rem 2rem !important;
+
+font-weight:600 !important;
+
+box-shadow:none !important;
+
+}
+
+.swal-btn-confirm:hover{
+
+background:#6b1266 !important;
+
+}
+
+.swal-btn-cancel{
+
+background:#f4f4f4 !important;
+
+color:#555 !important;
+
+border-radius:12px !important;
+
+padding:.8rem 2rem !important;
+
+font-weight:600 !important;
+
+box-shadow:none !important;
+
+}
+
+.swal-btn-cancel:hover{
+
+background:#e8e8e8 !important;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:768px){
+
+.cart-item{
+
+gap:1rem;
+
+}
+
+.cart-item-imagen{
+
+width:70px;
+
+height:70px;
+
+}
+
+.cart-item-info h4{
+
+font-size:1.35rem;
+
+}
+
+.cart-item-precio{
+
+font-size:1.05rem;
+
+}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:550px){
+
+.cart-item{
+
+display:grid;
+
+grid-template-columns:70px 1fr auto;
+
+grid-template-areas:
+
+"img info delete"
+
+"img price price";
+
+gap:.8rem;
+
+}
+
+.cart-item-imagen{
+
+grid-area:img;
+
+}
+
+.cart-item-info{
+
+grid-area:info;
+
+}
+
+.cart-item-precio{
+
+grid-area:price;
+
+padding-left:.2rem;
+
+}
+
+.cart-item-eliminar{
+
+grid-area:delete;
+
+width:40px;
+
+height:40px;
+
+}
+
+.cart-item-info h4{
+
+font-size:1.1rem;
+
+}
+
+.cart-item-varietal{
+
+font-size:.65rem;
+
+}
+
 }

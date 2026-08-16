@@ -1,51 +1,406 @@
-.footer {
-    background-color: #f94707;
-    border-top: #f94707 4px solid;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+/* =========================================
+   FOOTER - DESKTOP
+========================================= */
+
+.section-footer {
+    width: 100%;
+    background-color: #dbcadb;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    align-items: start;
+
+    gap: 4rem;
+
+    padding: 2.5rem 6rem 1.5rem;
+
+    box-sizing: border-box;
 }
 
-.aclaracion-web{
-    font-size: .7rem;
-    text-align: center;
-    margin-top: 0rem;
-    background-color: #ececec;
-    padding: .5rem 0;
-    border-top: #f94707 1px solid;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+
+/* =========================================
+   COLUMNA 1
+========================================= */
+
+.div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.footer-div{
-    background-color: #f94707;
-    margin-top: -1rem;
-    padding-top: 1rem;
+.img-footer {
+    max-width: 280px;
+    width: 100%;
+
+    margin-top: -1.3rem;
+    margin-bottom: 1rem;
 }
 
-.footer-div p, h5 {
-    color: #fafafa;
-    text-align: center;
+.p-div1 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
-.footer-iframe{
-    text-align: center;
+
+/* =========================================
+   REDES SOCIALES
+========================================= */
+
+.contenedor-iconos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
 }
 
-.footer-iframe iframe{
-    width: 300px;
-    height: 100px;
+.fa-instagram,
+.fa-whatsapp {
+    color: #5a0d55;
+
+    font-size: 2.2rem;
+
+
+
+    box-sizing: border-box;
 }
 
-.footer-final{
-    margin-bottom: 0rem;
+.fa-instagram {
+    margin-right: 0;
 }
 
-.fa-instagram{
-    color: #ffff;
-    font-size: 1.6rem;
+
+/* =========================================
+   COLUMNA 2 - NAVEGACIÓN
+========================================= */
+
+.div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.fa-whatsapp{
-    color: #ffff;
-    font-size: 1.6rem;    
+.h5-div2,
+.h5-div3 {
+    color: #5a0d55;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    margin-bottom: 1rem;
+}
+
+.links-div2 {
+    color: black;
+    text-decoration: none;
+
+    font-size: 1.1rem;
+
+    padding: 0.2rem 0;
+
+    transition: color 0.2s ease;
+}
+
+.links-div2:hover {
+    color: #5a0d55;
+}
+
+.links-div2 a {
+    color: black;
+}
+
+
+/* =========================================
+   COLUMNA 3 - SUSCRIPCIÓN
+========================================= */
+
+.div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-footer {
+    width: 100%;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.input-mail {
+    width: 100%;
+    height: 3rem;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border: none;
+
+    padding: 0 1rem;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.input-mail:focus {
+    outline: 2px solid #5a0d55;
+}
+
+.input-boton {
+    width: 15rem;
+    max-width: 100%;
+
+    height: 3rem;
+
+    border-radius: 10px;
+    border: none;
+
+    color: white;
+    background-color: #5a0d55;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.input-boton:hover {
+    background-color: #481f4f;
+}
+
+.input-boton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.mensaje-footer {
+    margin-top: 15px;
+
+    font-size: 15px;
+    color: #5a0d55;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .section-footer {
+        gap: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .img-footer {
+        max-width: 230px;
+    }
+
+    .p-div1 {
+        font-size: 1rem;
+    }
+
+    .links-div2 {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+========================================= */
+
+@media screen and (max-width: 800px) {
+
+    .section-footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        padding: 2.5rem 2rem;
+
+        gap: 3rem;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+
+    .div1 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .div2 {
+        display: none;
+    }
+
+    .div3 {
+
+        grid-column: 1 / -1;
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .p-div1{
+        display: none;
+    }
+
+    .form-footer {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .section-footer {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 2.5rem;
+
+        padding: 2.5rem 1.5rem 2rem;
+
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------
+       COLUMNA 1
+    ----------------------------------------- */
+
+    .div1 {
+        width: 100%;
+
+        align-items: center;
+    }
+
+    .img-footer {
+        width: 230px;
+        max-width: 80%;
+
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .p-div1 {
+        font-size: 0.95rem;
+
+        line-height: 1.5;
+
+        margin-bottom: 1rem;
+    }
+
+
+    /* -----------------------------------------
+       REDES
+    ----------------------------------------- */
+
+    .contenedor-iconos {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+    /* -----------------------------------------
+       NAVEGACIÓN
+    ----------------------------------------- */
+
+    .div2 {
+        width: 100%;
+
+        align-items: center;
+    }
+
+    .h5-div2,
+    .h5-div3 {
+        font-size: 0.9rem;
+    }
+
+    .links-div2 {
+        font-size: 1rem;
+    }
+
+
+    /* -----------------------------------------
+       SUSCRIPCIÓN
+    ----------------------------------------- */
+
+    .div3 {
+        width: 100%;
+
+        align-items: center;
+    }
+
+    .div3 .p-div1 {
+        max-width: 320px;
+    }
+
+    .form-footer {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .input-mail {
+        width: 100%;
+    }
+
+    .input-boton {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .section-footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        gap: 2rem;
+    }
+
+    .img-footer {
+        width: 210px;
+    }
+
+    .p-div1 {
+        font-size: 0.9rem;
+    }
+
+    .links-div2 {
+        font-size: 0.95rem;
+    }
+
+    .form-footer {
+        max-width: 280px;
+    }
+
 }

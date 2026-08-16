@@ -1,60 +1,522 @@
-.checkout-div {
-    margin-top: 5.5rem;
-    margin-bottom: 1rem;
+/* =========================================
+   CONTENEDOR GENERAL
+========================================= */
+
+.checkout {
+
+    width: 100%;
+
+    margin-top: 7rem;
+
+    margin-bottom: 5rem;
+
+    padding: 0 2rem;
+
+    box-sizing: border-box;
 }
 
-.checkout-nombre{
-    margin-bottom: 0rem;
+.checkout-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 3rem;
+
+    align-items: flex-start;
 }
 
-.div-lista {
-    margin-bottom: 1rem;
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.checkout-formulario {
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    padding: 2.5rem;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
 }
 
-.titulo-lista{
-    margin-top: 2rem;
+.checkout-subtitulo {
+
+    display: block;
+
+    color: #8b7d8b;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: .8rem;
 }
 
-.checkout-input:focus{
-    outline: none;
+.checkout-titulo {
+
+    margin: 0;
+
+    color: #5a0d55;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3rem;
+
+    font-weight: 500;
+}
+
+.checkout-descripcion {
+
+    margin-top: 1rem;
+
+    margin-bottom: 2rem;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.checkout-campo{
+
+    margin-bottom:1.3rem;
+}
+
+.checkout-campo label{
+
+    display:block;
+
+    margin-bottom:.5rem;
+
+    font-weight:600;
+
+    color:#555;
 }
 
 .checkout-input{
-    margin-bottom: .5rem;
-    border-radius: 7px;
-    width: 100%;
-    padding: .2rem;
+
+    width:100%;
+
+    height:52px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+    padding:0 1rem;
+
+    font-size:16px;
+
+    transition:.25s;
+
+    box-sizing:border-box;
+}
+
+.checkout-input:focus{
+
+    outline:none;
+
+    border-color:#5a0d55;
+
+    box-shadow:0 0 0 4px rgba(90,13,85,.08);
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.checkout-boton{
+
+    width:100%;
+
+    height:56px;
+
+    margin-top:1rem;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#5a0d55;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.checkout-boton:hover{
+
+    background:#481f4f;
+}
+
+
+/* =========================================
+   RESUMEN
+========================================= */
+
+.checkout-resumen{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:2rem;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:120px;
+}
+
+.checkout-resumen h3{
+
+    margin:0 0 2rem;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:2rem;
+
+    color:#5a0d55;
+}
+
+
+/* =========================================
+   ITEMS
+========================================= */
+
+.checkout-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:1rem;
+
+    margin-bottom:1.5rem;
+}
+
+.checkout-item-nombre{
+
+    margin:0;
+
+    color:#5a0d55;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    font-size:.9rem;
+}
+
+.checkout-item-descripcion{
+
+    margin-top:.35rem;
+
+    color:#555;
+
+    line-height:1.4;
+}
+
+.checkout-item-precio{
+
+    color:#5a0d55;
+
+    font-weight:700;
+
+    white-space:nowrap;
+}
+
+
+/* =========================================
+   TOTALES
+========================================= */
+
+.checkout-resumen hr{
+
+    margin:2rem 0;
+
+    border:none;
+
+    border-top:1px solid #e5e5e5;
+}
+
+.checkout-totales{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1rem;
+}
+
+.checkout-totales div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.checkout-totales span{
+
+    color:#666;
+}
+
+.checkout-totales strong{
+
+    color:#5a0d55;
+
+    font-size:1.15rem;
+}
+
+
+/* =========================================
+   SWEET ALERT
+========================================= */
+
+.swal-wine{
+
+    border-radius:24px !important;
+
+    padding:2rem !important;
+
+}
+
+.swal-title{
+
+    font-family:"Cormorant Garamond", serif !important;
+
+    color:#5a0d55 !important;
+
+    font-size:2.6rem !important;
+
+    font-weight:600 !important;
+
+}
+
+.swal-btn{
+
+    background:#5a0d55 !important;
+
+    color: white;
+
+    border-radius:12px !important;
+
+    padding:.8rem 2rem !important;
+
+    font-weight:600 !important;
+
+    transition:.25s;
+
+}
+
+.swal-btn:hover{
+
+    background:#481f4f !important;
+
+}
+
+.swal2-html-container{
+
+    color:#666 !important;
+
+    line-height:1.6;
+
+    font-size:1rem;
+
+}
+
+.swal2-icon.swal2-success{
+
+    border-color:#5a0d55 !important;
+
+    color:#5a0d55 !important;
+
+}
+
+.swal2-success-ring{
+
+    border-color:rgba(90,13,85,.25) !important;
+
+}
+
+.swal2-success-line-tip,
+
+.swal2-success-line-long{
+
+    background:#5a0d55 !important;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width:1024px){
+
+.checkout{
+
+padding:0 1.5rem;
+
+}
+
+.checkout-container{
+
+gap:2rem;
+
+}
+
+.checkout-formulario{
+
+padding:2rem;
+
+}
+
+.checkout-titulo{
+
+font-size:2.5rem;
+
+}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width:768px){
+
+.checkout{
+
+margin-top:6rem;
+
+padding:0 1rem;
+
+}
+
+.checkout-container{
+
+grid-template-columns:1fr;
+
+gap:2rem;
+
+}
+
+.checkout-formulario{
+
+padding:1.5rem;
+
+}
+
+.checkout-resumen{
+
+position:static;
+
+padding:1.5rem;
+
+}
+
+.checkout-titulo{
+
+font-size:2.2rem;
+
+}
+
+.checkout-descripcion{
+
+font-size:.95rem;
+
 }
 
 .checkout-boton{
-    background-color: #f94707;
-    color: #fafafa;
-    padding: .5rem;
-    border-radius: 8px;
-    border: none;
+
+height:52px;
+
 }
 
-.ultimo-input{
-    margin-bottom: 1rem;
 }
 
-.swal2-popup.swal2-modal.swal2-show {
-    width: 50rem;
-    border-radius: 2rem;
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media screen and (max-width:480px){
+
+.checkout{
+
+margin-top:5.5rem;
+
 }
 
-.swal2-popup.swal2-modal.swal2-show button{
-    width: 10rem;
-    border-radius: 1rem;
+.checkout-formulario{
+
+padding:1.2rem;
+
 }
 
-div:where(.swal2-container) .swal2-html-container{
-    font-size: 2rem !important;
-    color: black !important;
-    font-weight: bolder !important;
+.checkout-resumen{
+
+padding:1.2rem;
+
 }
 
-.swal2-html-container p{
-    font-size: 1.2rem !important;
-    color: #f94707 !important;
+.checkout-titulo{
+
+font-size:1.9rem;
+
+}
+
+.checkout-subtitulo{
+
+font-size:.75rem;
+
+letter-spacing:2px;
+
+}
+
+.checkout-item{
+
+flex-direction:column;
+
+gap:.4rem;
+
+}
+
+.checkout-item-precio{
+
+align-self:flex-end;
+
+}
+
 }
