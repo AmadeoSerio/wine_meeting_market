@@ -23,7 +23,7 @@ return(
             </p>
 
             <p>
-                En cada edición exploramos diferentes propuestas, desde vinos de distintas bodegas y varietales hasta yerbas orgánicas y tés en hebras cuidadosamente seleccionados. Compartimos sus orígenes, características, formas de elaboración y la mejor manera de apreciarlos.
+                En cada edición exploramos diferentes propuestas, desde vinos de distintas bodegas y varietales hasta yerbas orgánicas y té en hebras cuidadosamente seleccionados. Compartimos sus orígenes, características, formas de elaboración y la mejor manera de apreciarlos.
             </p>
 
             <p>

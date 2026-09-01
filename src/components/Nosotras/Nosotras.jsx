@@ -36,7 +36,7 @@ const Nosotras = () => {
                     </p>
 
                     <p>
-                        Trabajamos con una amplia selección de vinos, destilados, licores y accesorios para disfrutar cada brindis. Además, ofrecemos yerbas orgánicas, tés en hebras y todos los complementos necesarios para que cada momento tenga un valor especial.
+                        Trabajamos con una amplia selección de vinos, destilados, licores y accesorios para disfrutar cada brindis. Además, ofrecemos yerbas orgánicas, té en hebras y todos los complementos necesarios para que cada momento tenga un valor especial.
                     </p>
 
                     <p>
